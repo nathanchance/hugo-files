@@ -5,10 +5,6 @@ languageCode = "en-us"
 
 [menu]
   [[menu.header]]
-    name = "downloads"
-    weight = 0
-    url = "/downloads"
-  [[menu.header]]
     name = "projects"
     weight = 1
     url = "/projects"
@@ -16,6 +12,10 @@ languageCode = "en-us"
     name = "resume"
     weight = 2
     url = "/nathan_chancellor_resume.pdf"
+  [[menu.header]]
+    name = "downloads"
+    weight = 3
+    url = "/downloads"
 
 [params]
   GithubID = "nathanchance"
