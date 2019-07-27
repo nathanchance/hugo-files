@@ -1,6 +1,6 @@
 +++
 title = "My projects"
-date = "2019-05-03"
+date = "2019-07-26"
 menu = "main"
 +++
 
@@ -10,7 +10,7 @@ All of my personal projects can be found on [GitHub](https://github.com/nathanch
 
 # ClangBuiltLinux
 
-ClangBuiltLinux is a collaborative organization between several engineers across different companies like Google, Linaro, and IBM to improve building the Linux kernel with the LLVM tools such as clang and lld. I have contributed warning fixes to [the mainline Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Nathan+Chancellor), [improved the continuous integration setup](https://github.com/ClangBuiltLinux/continuous-integration/commits/master?author=nathanchance), and [developed a set of toolchain build scripts](https://github.com/ClangBuiltLinux/tc-build) for myself and others to use for consistent testing/configuration.
+ClangBuiltLinux is a collaborative organization between several engineers across different companies like Google, Linaro, and IBM to improve building the Linux kernel with the LLVM tools such as clang and lld. I have contributed various fixes to [the mainline Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Nathan+Chancellor), helped triage and debug issues on [the issue tracker](https://github.com/ClangBuiltLinux/linux/issues?q=commenter%3Anathanchance), improved the continuous integration setup through a set of [scripts](https://github.com/ClangBuiltLinux/continuous-integration/commits/master?author=nathanchance) and [Docker images](https://github.com/ClangBuiltLinux/dockerimage/commits/master?commits=nathanchance), and [developed a set of toolchain build scripts](https://github.com/ClangBuiltLinux/tc-build) for myself and others to use for consistent testing/developing.
 
 
 # Flash Kernel
@@ -28,26 +28,20 @@ All of my kernels focused on stability/security by merging in the stable updates
 
 # Other interesting personal repos
 
-* [My scripts](https://github.com/nathanchance/scripts) and [dotfiles](https://github.com/nathanchance/dotfiles): The scripts I use for my workflow and personal configuration files, focusing on increasing productivity by decreasing manual intervention needed to doing repetitive tasks.
+* [My scripts](https://github.com/nathanchance/scripts): The scripts I use for my workflow and personal configuration files, focusing on increasing productivity by decreasing manual intervention needed to doing repetitive tasks.
 
 * [android-kernel-clang](https://github.com/nathanchance/android-kernel-clang): Collected the core Clang patchset for Android kernels from the Pixel 2 and Chromium kernel repositories, supplementing them with fixes for warnings from out of tree code.
 
 * [build-tools-gcc](https://github.com/nathanchance/build-tools-gcc): A script to build a GCC cross compiler for arm/arm64.
 
 
-# Open source organizations I belong to
-
-* [android-linux-stable](https://github.com/android-linux-stable): Several Android kernel trees with the latest stable tags from [kernel.org](https://www.kernel.org) merged into them, along with conflict resolution notes and a how-to process for other developers and information for users to understand the process. Testing includes merging into my own Flash Kernel repositories linked above and building with all of the relevant defconfigs/compilers. I report results back to the stable tree maintainers, receiving praise for my efforts on a couple occasions ([1](https://lore.kernel.org/lkml/20171117083016.GA20306@kroah.com/) and [2](https://lore.kernel.org/lkml/20180805140301.GA17056@kroah.com/)). Recently, I streamlined the maintenance of these repos into [a script](https://github.com/nathanchance/scripts/blob/master/server/als).
-
-* [Substratum](https://github.com/substratum): An app to compile theming overlays for Sony's Overlay Manager Service (OMS). I am responsible for [our code review](https://substratum.review]) and [our documentation](https://github.com/substratum/documentation).
-
-* [Dirty Unicorns](https://github.com/DirtyUnicorns): An aftermarket Android ROM. I am responsible for helping with testing and picking in features, along with fixing issues.
-
 
 # Other open source contributions
+
+* [android-linux-stable](https://github.com/android-linux-stable): Several Android kernel trees with the latest stable tags from [kernel.org](https://www.kernel.org) merged into them, along with conflict resolution notes and a how-to process for other developers and information for users to understand the process. Testing includes merging into my own Flash Kernel repositories linked above and building with all of the relevant defconfigs/compilers. I report results back to the stable tree maintainers, receiving praise for my efforts on a couple occasions ([one](https://lore.kernel.org/lkml/20171117083016.GA20306@kroah.com/) and [two](https://lore.kernel.org/lkml/20180805140301.GA17056@kroah.com/)). I streamlined the maintenance of these repos into [a script](https://github.com/nathanchance/scripts/blob/master/workstation/als).
 
 * [kernel/common](https://android-review.googlesource.com/q/project:kernel/common+author:natechancellor%2540gmail.com): Google's common Android kernel.
 
 * [sonyxperiadev/kernel](https://github.com/sonyxperiadev/kernel/pulls?q=author%3Anathanchance): The Linux kernel used for [Sony's Open Devices program](https://developer.sony.com/develop/open-devices/).
 
-* [AnyKernel2](https://github.com/osm0sis/AnyKernel2/commits/master?author=nathanchance): A kernel flashing utility for TWRP, responsible for unpacking the boot image, applying any requested ramdisk changes, repacking the files, and flashing them to the boot image partition.
+* [AnyKernel3](https://github.com/osm0sis/AnyKernel3/commits/master?author=nathanchance): A kernel flashing utility for TWRP, responsible for unpacking the boot image, applying any requested ramdisk changes, repacking the files, and flashing them to the boot image partition.
