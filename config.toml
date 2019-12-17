@@ -5,16 +5,20 @@ languageCode = "en-us"
 
 [menu]
   [[menu.header]]
-    name = "projects"
+    name = "posts"
     weight = 1
+    url = "/posts/"
+  [[menu.header]]
+    name = "projects"
+    weight = 2
     url = "/projects/"
   [[menu.header]]
     name = "resume"
-    weight = 2
+    weight = 3
     url = "/nathan_chancellor_resume.pdf"
   [[menu.header]]
     name = "downloads"
-    weight = 3
+    weight = 4
     url = "/downloads/"
 
 [params]
