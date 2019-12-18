@@ -40,6 +40,8 @@ $ chmod +x llvm.sh
 $ sudo ./llvm.sh 10
 ```
 
+If you are not on an Ubuntu or Debian based operating system, you can build `clang` and `ld.lld` from source easily with my [`tc-build` script](https://github.com/ClangBuiltLinux/tc-build). Read the information in that README for how to use it and file issues at that repo if you run into any, I want to fix them!
+
 ### 2. Download the WSL 2 source code.
 
 ```bash
