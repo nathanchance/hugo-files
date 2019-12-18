@@ -34,6 +34,7 @@ wget
 Next, we will install a rolling release version of clang-10 and lld-10 from apt.llvm.org. There has been a lot of work done on the LLVM side to make building the Linux kernel a good experience and it is important to have all of those fixes available.
 
 ```bash
+$ cd ~
 $ wget https://apt.llvm.org/llvm.sh
 $ chmod +x llvm.sh
 $ sudo ./llvm.sh 10
@@ -42,7 +43,6 @@ $ sudo ./llvm.sh 10
 ### 2. Download the WSL 2 source code.
 
 ```bash
-$ cd
 $ git clone https://github.com/microsoft/WSL2-Linux-Kernel
 $ cd WSL2-Linux-Kernel
 ```
