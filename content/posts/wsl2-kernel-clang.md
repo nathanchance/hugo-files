@@ -7,7 +7,7 @@ Recently, I built a computer for school that I installed Windows 10 Pro on ([lin
 
 ## Building the kernel
 
-You can either build the kernel on another machine and download it locally or you can build it within WSL 2 itself. This is a guide for how to do the latter because it is simpler. I am giving the instructions for Debian but these should work for Ubuntu (I just do not want to tear down my current working environment to test...). I am also going to assume that you are familiar with Linux in general so I am not going to explain every single command.
+You can either build the kernel on another machine and download it locally or you can build it within WSL 2 itself. This is a guide for how to do the latter because it is simpler and does not mess with an existing environment you might have working. I am giving the instructions for Debian but these should work for Ubuntu (I just do not want to tear down my current working environment to test...). I am also going to assume that you are familiar with Linux in general so I am not going to explain every single command.
 
 ### 1. Download and install the needed tools.
 
@@ -85,10 +85,26 @@ $ cat /mnt/c/Users/natec/.wslconfig
 kernel = C:\\Users\\natec\\Linux\\kernel-4.19-clang
 ```
 
-Basically, you pass it the full path to your kernel binary with the `\`s escaped. After that, you need to shutdown your WSL 2 VM in Powershell or `cmd` and just reopen it.
+You can create this with Visual Studio Code or a terminal editor like `vim`. Basically, you pass it the full path to your kernel binary with the "`\`" characters escaped. After that, you need to shutdown your WSL 2 VM in Powershell or `cmd` and just reopen it.
 
 ```bash
 $ wsl --shutdown
+```
+
+After you have done that, you can run `cat /proc/version` to verify that WSL booted from that kernel.
+
+Before:
+
+```bash
+$ cat /proc/version
+Linux version 4.19.84-microsoft-standard (oe-user@oe-host) (gcc version 8.2.0 (GCC)) #1 SMP Wed Nov 13 11:44:37 UTC 2019
+```
+
+After:
+
+```bash
+$ cat /proc/version
+Linux version 4.19.84-microsoft-standard+ (nathan@Ryzen-7-3700X) (clang version 10.0.0-+20191217115131+ddd0bb8dba2-1~exp1~20191217105722.470) #1 SMP Tue Dec 17 17:15:48 MST 2019
 ```
 
 I have noticed that the VM gets stuck starting with a custom kernel at times; if that happens, run `wsl --shutdown` and try reopening one of the distributions again, it will usually work after a couple of times.
