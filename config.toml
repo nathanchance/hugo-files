@@ -15,7 +15,7 @@ languageCode = "en-us"
   [[menu.header]]
     name = "resume"
     weight = 3
-    url = "/nathan_chancellor_resume.pdf"
+    url = "/nc_resume.pdf"
   [[menu.header]]
     name = "downloads"
     weight = 4
