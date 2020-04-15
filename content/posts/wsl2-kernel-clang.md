@@ -1,6 +1,10 @@
 ---
 title: "Building the WSL 2 kernel with Clang"
 date: 2019-12-17T13:53:23-07:00
+tags:
+  - clang
+  - linux
+  - wsl2
 ---
 
 Recently, I built a computer for school that I installed Windows 10 Pro on ([link to the current specs](https://pcpartpicker.com/user/nchancellor/saved/bLjTCJ) if you are curious). I was a little bummed about leaving Chrome OS because I was going to lose my local Linux development environment; however, Windows Subsystem for Linux is a thing and it has gotten even better with WSL 2, as it is actually running a Linux kernel so there is full Linux compatibility going forward. I also learned that it is possible to replace the Linux kernel that Microsoft ships with your own. This is a mini guide for what I uncovered because there is not a ton of information around for how to do this.

@@ -1,6 +1,10 @@
 ---
 title: "Building and Using Cuttlefish"
 date: 2020-01-31T18:52:00-07:00
+tags:
+  - android
+  - clang
+  - linux
 ---
 
 Recently, I stumbled upon [a talk](https://youtu.be/xMtDDEj-02c?t=9502) that Alistair Delva, a Google engineer, gave at the 2018 Linux Plumbers Conference around Cuttlefish, an Android Virtual Device (AVD) that is used to validate the Android platform virtually (i.e. without a separate device). This is something that is really cool because it makes it easy to follow along with upstream Android development and see what changes they are making under the hood, all from `adb shell`. Cuttlefish boots in around 20 seconds on my machine and swapping out kernels is as simple as adding two command flags which I will go over later. If you are running Cuttlefish locally, you can even [view it](https://android.googlesource.com/device/google/cuttlefish/#so-you-want-to-see-cuttlefish) with TightVNC.
