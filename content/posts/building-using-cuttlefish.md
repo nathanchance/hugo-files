@@ -1,5 +1,5 @@
 ---
-title: "Building and Using Cuttlefish"
+title: "Building and using Cuttlefish"
 date: 2020-01-31T18:52:00-07:00
 tags:
   - android
