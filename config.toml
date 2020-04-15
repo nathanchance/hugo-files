@@ -1,36 +1,83 @@
 baseurl = "https://nathanchance.dev/"
-title = "Nathan Chancellor"
-theme = "nix"
 languageCode = "en-us"
+theme = "hello-friend-ng"
+
+[author]
+  name = "Nathan Chancellor"
+
+[languages]
+  [languages.en]
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    keywords = ""
+    homeSubtitle = "University student and amateur kernel/compiler hacker"
+    readOtherPosts = "Read other posts"
+    title = "Nathan Chancellor"
+
+  [languages.en.params.logo]
+    logoHomeLink = "/"
+    logoText = "nathanchance.dev"
 
 [menu]
-  [[menu.header]]
-    name = "posts"
-    weight = 1
-    url = "/posts/"
-  [[menu.header]]
-    name = "projects"
-    weight = 2
-    url = "/projects/"
-  [[menu.header]]
-    name = "resume"
-    weight = 3
-    url = "/nc_resume.pdf"
-  [[menu.header]]
-    name = "downloads"
-    weight = 4
-    url = "/downloads/"
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
+    weight     = 1
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+    weight     = 2
+  [[menu.main]]
+    identifier = "resume"
+    name       = "Resume"
+    url        = "/nc_resume.pdf"
+    weight     = 3
+  [[menu.main]]
+    identifier = "downloads"
+    name       = "Downloads"
+    url        = "/downloads"
+    weight     = 4
 
 [params]
-  GithubID = "nathanchance"
-  LinkedInID = "nathanchancellor"
-  TelegramID = "nathanchance"
-  TwitterID = "nathanchance"
-  InstagramID = "nchancellor"
-  GnuPGFingerprint = "99739260CB6CB716"
-  Name = "Nathan Chancellor"
-  HeaderUsername = "nathan"
-  HeaderHostname = "mesa-az"
-  Email = "natechancellor@gmail.com"
-  About = "Hello, my name is Nathan and I am a university student and amateur kernel hacker. I am mostly interested in compilers, lower level architecture stuff, and security. If you have any questions about my projects or just want to talk, feel free to reach out to me using any of the methods above! If you are looking for Flash Kernel, please see the downloads folder above."
-  ProfilePicture = "/profile.jpg"
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  defaultTheme = "dark"
+
+  contentTypeName = "posts"
+  disableReadOtherPosts = false
+
+  description = "Nathan Chancellor's personal website"
+  keywords = "homepage, blog"
+  images = [""]
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:natechancellor@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/nathanchance"
+
+  [[params.social]]
+    name = "instagram"
+    url  = "https://instagram.com/nchancellor"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://linkedin.com/in/nathanchancellor"
+
+  [[params.social]]
+    name = "telegram"
+    url  = "https://t.me/nathanchance"
+
+  [[params.social]]
+    name = "twitter"
+    url  = "https://github.com/nathanchance"
+
+  [[params.social]]
+    name = "youtube"
+    url  = "https://www.youtube.com/user/NateChs"

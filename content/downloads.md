@@ -1,7 +1,6 @@
 +++
 title = "Downloads"
 date = "2019-07-02"
-menu = "main"
 +++
 
 I used to host files on this website but I have offloaded them to other services.
