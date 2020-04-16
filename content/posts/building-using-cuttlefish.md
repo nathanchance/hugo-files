@@ -398,4 +398,4 @@ Linux version 5.5.0-mainline-03266-g1dad8acc36fc-dirty (nathan@g2-large-x86) (Cl
 
 # Conclusion
 
-Hopefully this was information for you! Some further things to potentially explore are things like [adeb](https://github.com/joelagnel/adeb), which allow you to use tracing tools and other Linux utilities on Android to poke around its internals and try and improve or break things or looking into some of the new cool things they are doing like Apex. If you have any questions or problems, feel free to reach out to me on Twitter or GitHub, both of which are linked on my homepage.
+Hopefully this was informative for you! Some further things to potentially explore are things like [adeb](https://github.com/joelagnel/adeb), which allow you to use tracing tools and other Linux utilities on Android to poke around its internals and try and improve or break things or looking into some of the new cool things they are doing like Apex. If you have any questions or problems, feel free to reach out to me on Twitter or GitHub, both of which are linked on my homepage.
