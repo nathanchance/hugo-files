@@ -1,5 +1,5 @@
 ---
-title: "Art of git revert"
+title: "The art of git revert"
 date: 2020-04-15T15:11:58-07:00
 tags:
   - git
