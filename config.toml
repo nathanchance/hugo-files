@@ -76,7 +76,7 @@ theme = "hello-friend-ng"
 
   [[params.social]]
     name = "twitter"
-    url  = "https://github.com/nathanchance"
+    url  = "https://twitter.com/nathanchance"
 
   [[params.social]]
     name = "youtube"
