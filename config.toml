@@ -56,11 +56,19 @@ theme = "hello-friend-ng"
 
   [[params.social]]
     name = "email"
-    url  = "mailto:natechancellor@gmail.com"
+    url  = "mailto:nathan@kernel.org"
 
   [[params.social]]
     name = "github"
     url  = "https://github.com/nathanchance"
+
+  [[params.social]]
+    name = "gitlab"
+    url  = "https://gitlab.com/nathanchance"
+
+  [[params.social]]
+    name = "gpg"
+    url  = "/99739260CB6CB716.asc"
 
   [[params.social]]
     name = "instagram"
