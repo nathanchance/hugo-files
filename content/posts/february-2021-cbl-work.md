@@ -16,7 +16,7 @@ As some of you may or may not know by now, I am [now employed](https://www.linux
 
 First and foremost, I am a Linux kernel developer, meaning that I love sending kernel patches. Getting familiar with `git send-email` and the standard Linux kernel workflow can be difficult but now that I am used to it, I find other things cumbersome.
 
-Some of the patches that I send in February are as follows:
+Some of the patches that I sent in February are as follows:
 
 *  [`arm64: Make CPU_BIG_ENDIAN depend on ld.bfd or ld.lld 13.0.0+`](https://lore.kernel.org/r/20210209005719.803608-1-nathan@kernel.org/): I did not do a whole ton of heavy lifting on this, it is mostly thanks to Fangrui Song that this is possible. Getting proper big endian support for AArch64 is not the biggest deal because it is not super common except in networking but more support is more support. One less configuration option that has to be toggled :)
 
