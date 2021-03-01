@@ -83,6 +83,10 @@ theme = "hello-friend-ng"
     url  = "https://t.me/nathanchance"
 
   [[params.social]]
+    name = "twitch"
+    url  = "https://twitch.tv/nathanchance"
+
+  [[params.social]]
     name = "twitter"
     url  = "https://twitter.com/nathanchance"
 
