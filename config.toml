@@ -45,7 +45,7 @@ theme = "hello-friend-ng"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
 
-  defaultTheme = "dark"
+  enableThemeToggle = true
 
   contentTypeName = "posts"
   disableReadOtherPosts = false
