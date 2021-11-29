@@ -7,7 +7,6 @@ theme = "hello-friend-ng"
 
 [languages]
   [languages.en]
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
     keywords = ""
     homeSubtitle = "University student and kernel/compiler hacker"
     readOtherPosts = "Read other posts"
@@ -53,6 +52,10 @@ theme = "hello-friend-ng"
   description = "Nathan Chancellor's personal website"
   keywords = "homepage, blog"
   images = [""]
+
+  [params.footer]
+    trademark = true
+    author = true
 
   [[params.social]]
     name = "email"
