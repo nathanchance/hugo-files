@@ -499,4 +499,4 @@ $ wc -l file.i{,.orig}
 
 ## Conclusion
 
-Providing devleopers a small, concise reproducer is important so that all their time can spent debugging and fixing the issue; otherwise, they are less likely to respond to the report, as it will take more work on their part than another issue where the reproducer is ready and available. Hopefully this post was informative! If there are any issues, comments, or improvements, feel free to reach out to me via [email](mailto:nathan@kernel.org) or [Twitter](https://twitter.com/nathanchance).
+Providing developers a small, concise reproducer is important so that all their time can spent debugging and fixing the issue; otherwise, they are less likely to respond to the report, as it will take more work on their part than another issue where the reproducer is ready and available. Hopefully this post was informative! If there are any issues, comments, or improvements, feel free to reach out to me via [email](mailto:nathan@kernel.org) or [Twitter](https://twitter.com/nathanchance).
