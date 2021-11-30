@@ -278,7 +278,7 @@ $ ./test.sh
 ld.lld: error: Never resolved function from blockaddress (Producer: 'LLVM14.0.0git' Reader: 'LLVM 14.0.0git')
 ```
 
-Before we move on, we should trim down the compiler flags, as some of them may not be necessary to reproduce the issue. Dropping flags after this point is definitely possible but doing it now can help `creduce` or `cvise` really tease out the source code that triggers the problem, as your interesting test can be written in a clearer manner (more on that later). There is not really any art to this; I will typically remove four to five flags at a time to see if I can reproduce the issue. If it does, the flags were not important but if it doesn't, the flag needs to stick around (`-O2` almost always needs to stay around). After running through that process with this issue, we end up with:
+Before we move on, we should trim down the compiler flags, as some of them may not be necessary to reproduce the issue. Dropping flags after this point is definitely possible but doing it now can help `creduce` or `cvise` really tease out the source code that triggers the problem, as your interesting test can be written in a clearer manner (more on that later). There is not really any art to this; I will typically remove four to five flags at a time to see if I can reproduce the issue. If it does, the flags were not important but if it doesn't, the flag needs to stick around (the Linux kernel is no longer buildable without optimizations so `-Os`/`-O2`/`-O3` will almost always be needed). After running through that process with this issue, we end up with:
 
 ```
 $ cat test.sh
