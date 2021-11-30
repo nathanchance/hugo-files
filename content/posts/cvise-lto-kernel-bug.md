@@ -340,15 +340,7 @@ $ echo $?
 
 Now, we want to make sure `creduce`/`cvise` gives us code that stresses the error under these specific conditions and not others. For this reason, I typically write two other tests within my interestingness test. The first is making sure that `creduce`/`cvise` does not introduce new warnings under either GCC and `clang`; this also makes sure the code is accepted by two compilers, which improves its quality. This directly contradicts [note #3 in the `cvise` README](https://github.com/marxin/cvise#notes) but I have seen some dumb looking code generated from these tools so keeping it somewhat warning clean makes that less likely. The one downside of this is it typically makes the reduction take longer so keep that in mind if you decide to add it.
 
-First, let's try to build the source with `gcc`:
-
-```
-$ gcc -c -o /dev/null file.i
-...
-./arch/x86/include/asm/jump_label.h:27:2: error: impossible constraint in ‘asm’
-```
-
-The Linux kernel pretty much expects `-O2` or higher.
+First, let's try to build the source with `gcc` (as mentioned above, the Linux kernel requires optimizations to build so we add `-O2`):
 
 ```
 $ gcc -O2 -c -o /dev/null file.i
