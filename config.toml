@@ -1,31 +1,23 @@
+# Universal configuration
 baseurl = "https://nathanchance.dev/"
+disqusShortname = "nathanchance"
 languageCode = "en-us"
-theme = "hello-friend-ng"
+theme = "cactus"
+title = "Nathan Chancellor"
 
 [author]
   name = "Nathan Chancellor"
 
-[languages]
-  [languages.en]
-    keywords = ""
-    homeSubtitle = "University student and kernel/compiler hacker"
-    readOtherPosts = "Read other posts"
-    title = "Nathan Chancellor"
-
-  [languages.en.params.logo]
-    logoHomeLink = "/"
-    logoText = "nathanchance.dev"
-
 [menu]
-  [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "/about"
-    weight     = 1
   [[menu.main]]
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
+    weight     = 1
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
     weight     = 2
   [[menu.main]]
     identifier = "resume"
@@ -38,61 +30,54 @@ theme = "hello-friend-ng"
     url        = "/downloads"
     weight     = 4
 
+# Theme specific configuration
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+  description = "I am a Linux kernel developer focused on improving compatibility with LLVM and clang as part of [ClangBuiltLinux](https://clangbuiltlinux.github.io/). I mostly blog about my work and tips and tricks that I discover."
+  mainSection = "posts"
+  mainSectionTitle = "Blog"
+  projectsUrl = "https://github.com/nathanchance"
+  showAllPostsArchive = true
+  showProjectsList = true
 
-  enableThemeToggle = true
-
-  contentTypeName = "posts"
-  disableReadOtherPosts = false
-
-  description = "Nathan Chancellor's personal website"
-  keywords = "homepage, blog"
-  images = [""]
-
-  [params.footer]
-    trademark = true
-    author = true
+  [params.comments]
+    enabled = true
 
   [[params.social]]
     name = "email"
-    url  = "mailto:nathan@kernel.org"
+    link  = "nathan@kernel.org"
 
   [[params.social]]
     name = "github"
-    url  = "https://github.com/nathanchance"
+    link  = "https://github.com/nathanchance"
 
   [[params.social]]
     name = "gitlab"
-    url  = "https://gitlab.com/nathanchance"
+    link  = "https://gitlab.com/nathanchance"
 
   [[params.social]]
-    name = "gpg"
-    url  = "/99739260CB6CB716.asc"
+    name = "expeditedssl"
+    link  = "/99739260CB6CB716.asc"
 
   [[params.social]]
     name = "instagram"
-    url  = "https://instagram.com/nchancellor"
+    link  = "https://instagram.com/nchancellor"
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://linkedin.com/in/nathanchancellor"
+    link  = "https://linkedin.com/in/nathanchancellor"
 
   [[params.social]]
     name = "telegram"
-    url  = "https://t.me/nathanchance"
+    link  = "https://t.me/nathanchance"
 
   [[params.social]]
     name = "twitch"
-    url  = "https://twitch.tv/nathanchance"
+    link  = "https://twitch.tv/nathanchance"
 
   [[params.social]]
     name = "twitter"
-    url  = "https://twitter.com/nathanchance"
+    link  = "https://twitter.com/nathanchance"
 
   [[params.social]]
     name = "youtube"
-    url  = "https://www.youtube.com/user/NateChs"
+    link  = "https://www.youtube.com/user/NateChs"
