@@ -36,11 +36,16 @@ title = "Nathan Chancellor"
   mainSection = "posts"
   mainSectionTitle = "Blog"
   projectsUrl = "https://github.com/nathanchance"
+  rss = true
   showAllPostsArchive = true
   showProjectsList = true
 
   [params.comments]
     enabled = true
+
+  [[params.social]]
+    name = "rss"
+    link  = "/index.xml"
 
   [[params.social]]
     name = "email"
