@@ -5,7 +5,7 @@ date: 2020-04-14T19:09:55-07:00
 
 ![](/profile.jpg)
 
-I am a 26 year old university student at Grand Canyon University, majoring in Information Technology and a Linux kernel and LLVM hacker, currently employed as an independent contractor through [The Linux Foundation](https://linuxfoundation.org/) to maintain [ClangBuiltLinux](https://clangbuiltlinux.github.io/).
+I am a 27 year old university student at Grand Canyon University, majoring in Information Technology and a Linux kernel and LLVM hacker, currently employed as an independent contractor through [The Linux Foundation](https://linuxfoundation.org/) to maintain [ClangBuiltLinux](https://clangbuiltlinux.github.io/).
 
 I am interested in performance analysis, compilers, security, and operating systems.
 
