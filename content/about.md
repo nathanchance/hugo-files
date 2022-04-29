@@ -1,20 +1,18 @@
 ---
 title: "About"
-date: 2020-04-14T19:09:55-07:00
+date: 2022-04-29T10:15:00-07:00
 ---
 
 ![](/profile.jpg)
 
-I am a 27 year old university student at Grand Canyon University, majoring in Information Technology and a Linux kernel and LLVM hacker, currently employed as an independent contractor through [The Linux Foundation](https://linuxfoundation.org/) to maintain [ClangBuiltLinux](https://clangbuiltlinux.github.io/).
-
-I am interested in performance analysis, compilers, security, and operating systems.
+I am a 27 year old Linux kernel and LLVM hacker, currently employed as an independent contractor through [The Linux Foundation](https://linuxfoundation.org/) to maintain [ClangBuiltLinux](https://clangbuiltlinux.github.io/). I am interested in performance analysis, compilers, security, and operating systems. I completed my Bachelor of Science in Information Technology at [Grand Canyon University](https://gcu.edu/) in 2022.
 
 Below are links to some of my open source contributions. If you have any questions about them, feel free to reach out to me with the links on the home page.
 
 
 ## ClangBuiltLinux
 
-ClangBuiltLinux is a collaborative organization between several engineers across different companies like Google, Linaro, and IBM to improve building the Linux kernel with the LLVM tools such as clang and lld. I have contributed various fixes to [the Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=author&q=Nathan+Chancellor) and [LLVM](https://github.com/llvm/llvm-project/commits/main?author=nathanchance), helped triage and debug issues on [the issue tracker](https://github.com/ClangBuiltLinux/linux/issues?q=commenter%3Anathanchance), improved the continuous integration setups ([Travis CI based](https://github.com/ClangBuiltLinux/continuous-integration/commits/master?author=nathanchance) and [TuxSuite / GitHub Actions based](https://github.com/ClangBuiltLinux/continuous-integration2/commits/main?author=nathanchance)), developed a [QEMU and buildroot boot framework](https://github.com/ClangBuiltLinux/boot-utils/commits/master?author=nathanchance), a [Docker testing environment](https://github.com/ClangBuiltLinux/dockerimage/commits/master?author=nathanchance), and a [set of toolchain build scripts](https://github.com/ClangBuiltLinux/tc-build/commits/master?author=nathanchance) for myself and others to use for consistent testing/developing.
+ClangBuiltLinux is a collaborative organization between several engineers across different companies like Google, Linaro, and IBM to improve building the Linux kernel with the LLVM tools such as clang and lld. I have contributed various fixes to [the Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=author&q=Nathan+Chancellor) and [LLVM](https://github.com/llvm/llvm-project/commits/main?author=nathanchance), helped triage and debug issues on [the issue tracker](https://github.com/ClangBuiltLinux/linux/issues?q=commenter%3Anathanchance), improved the continuous integration setups ([Travis CI based](https://github.com/ClangBuiltLinux/continuous-integration/commits/master?author=nathanchance) and [TuxSuite / GitHub Actions based](https://github.com/ClangBuiltLinux/continuous-integration2/commits/main?author=nathanchance)), developed a [QEMU and buildroot boot framework](https://github.com/ClangBuiltLinux/boot-utils/commits/main?author=nathanchance), a Docker testing environment ([former](https://github.com/ClangBuiltLinux/dockerimage/commits/main?author=nathanchance) and [current](https://github.com/ClangBuiltLinux/containers/commits/main?author=nathanchance)), and a [set of toolchain build scripts](https://github.com/ClangBuiltLinux/tc-build/commits/master?author=nathanchance) for myself and others to use for consistent testing/developing.
 
 
 ## Flash Kernel
@@ -45,6 +43,6 @@ All of my kernels focused on stability/security by merging in the stable updates
 
 ## Miscellaneous interesting personal repos
 
-* [My scripts](https://github.com/nathanchance/scripts): The scripts I use for my workflow and personal configuration files, focusing on increasing productivity by decreasing manual intervention needed to doing repetitive tasks.
+* [My environment](https://github.com/nathanchance/env): The scripts and tools I use for my workflow and personal configuration files, focusing on increasing productivity by decreasing manual intervention needed to doing repetitive tasks.
 
 * [WSL2-Linux-Kernel](https://github.com/nathanchance/WSL2-Linux-Kernel): My personal kernel for Windows Subsystem for Linux 2.
