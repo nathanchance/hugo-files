@@ -1,0 +1,89 @@
+baseURL: "https://nathanchance.dev/"
+enableRobotsTXT: true
+pygmentsUseClasses: true
+paginate: 10
+theme: PaperMod
+title: "Nathan Chancellor"
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+
+menu:
+  main:
+  - name: Blog
+    url: posts/
+    weight: 1
+  - name: About
+    url: about/
+    weight: 2
+  - name: Resume
+    url: nc_resume.pdf
+    weight: 3
+  - name: Downloads
+    url: downloads/
+    weight: 4
+
+minify:
+  disableXML: true
+
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+
+params:
+  author: Nathan Chancellor
+  comments: true
+  defaultTheme: auto
+  env: production
+
+  editPost:
+    URL: "https://github.com/nathanchance/hugo-files/blob/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+  homeInfoParams:
+    Title: "Hello 👋"
+    Content: >
+      I am a Linux kernel developer focused on improving compatibility with LLVM and clang as part of [ClangBuiltLinux](https://clangbuiltlinux.github.io/). I mostly blog about my work and tips and tricks that I discover.
+
+  socialIcons:
+    - name: rss
+      url: "/index.xml"
+    - name: email
+      url: "mailto:nathan@kernel.org"
+    - name: cv
+      url: "/nc_resume.pdf"
+    - name: other
+      url: "/99739260CB6CB716.asc"
+    - name: github
+      url: "https://github.com/nathanchance"
+    - name: gitlab
+      url: "https://gitlab.com/nathanchance"
+    - name: instagram
+      url: "https://instagram.com/nchancellor"
+    - name: linkedin
+      url: "https://linkedin.com/in/nathanchancellor"
+    - name: telegram
+      url: "https://t.me/nathanchance"
+    - name: twitch
+      url: "https://twitch.tv/nathanchance"
+    - name: twitter
+      url: "https://twitter.com/nathanchance"
+    - name: xda
+      url: "https://forum.xda-developers.com/m/nathanchance.6842057/"
+    - name: youtube
+      url: "https://www.youtube.com/user/NateChs"
+
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowToc: true
