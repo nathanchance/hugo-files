@@ -71,6 +71,8 @@ params:
       url: "https://instagram.com/nchancellor"
     - name: linkedin
       url: "https://linkedin.com/in/nathanchancellor"
+    - name: mastodon
+      url: "https://fosstodon.org/@nathanchance"
     - name: telegram
       url: "https://t.me/nathanchance"
     - name: twitch
