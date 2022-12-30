@@ -19,8 +19,7 @@ This year, I had 132 commits accepted and merged into mainline, which can either
 
 <details>
 <summary><code>git log --author='Nathan Chancellor' --since='Jan 1, 2022' --before='Jan 1, 2023'</code></summary>
-<p><code>
-<a href="https://git.kernel.org/linus/d6a9fb87e9d18f3394a9845546bbe868efdccfd2">d6a9fb87e9d1</a> ("security: Restrict CONFIG_ZERO_CALL_USED_REGS to gcc or clang > 15.0.6")<br/>
+<p><code><a href="https://git.kernel.org/linus/d6a9fb87e9d18f3394a9845546bbe868efdccfd2">d6a9fb87e9d1</a> ("security: Restrict CONFIG_ZERO_CALL_USED_REGS to gcc or clang > 15.0.6")<br/>
 <a href="https://git.kernel.org/linus/19331e84c3873256537d446afec1f6c507f8c4ef">19331e84c387</a> ("modpost: Include '.text.*' in TEXT_SECTIONS")<br/>
 <a href="https://git.kernel.org/linus/0d24f1b7cc65ee73ea8d04e0d10f77a7cb7a83f3">0d24f1b7cc65</a> ("padata: Mark padata_work_init() as __ref")<br/>
 <a href="https://git.kernel.org/linus/45be2ad007a9c6bea70249c4cf3e4905afe4caeb">45be2ad007a9</a> ("x86/vdso: Conditionally export __vdso_sgx_enter_enclave()")<br/>
@@ -169,8 +168,7 @@ It is important to keep in mind that sending patches is only part of the develop
 
 <details>
 <summary><code>Reported-by</code></summary>
-<p><code>
-<a href="https://git.kernel.org/linus/980411a4d1bb925d28cd9e8d8301dc982ece788d">980411a4d1bb</a> ("powerpc/code-patching: Fix oops with DEBUG_VM enabled")<br/>
+<p><code><a href="https://git.kernel.org/linus/980411a4d1bb925d28cd9e8d8301dc982ece788d">980411a4d1bb</a> ("powerpc/code-patching: Fix oops with DEBUG_VM enabled")<br/>
 <a href="https://git.kernel.org/linus/0ba09b1733878afe838fe35c310715fda3d46428">0ba09b173387</a> ("Revert "mm: align larger anonymous mappings on THP boundaries"")<br/>
 <a href="https://git.kernel.org/linus/d03407183d97554dfffea70f385b5bdd520f846c">d03407183d97</a> ("wifi: ath10k: fix QCOM_SMEM dependency")<br/>
 <a href="https://git.kernel.org/linus/beb3d47d1d3d7185bb401af628ad32ee204a9526">beb3d47d1d3d</a> ("bpf: Fix a BTF_ID_LIST bug with CONFIG_DEBUG_INFO_BTF not set")<br/>
@@ -222,8 +220,7 @@ It is important to keep in mind that sending patches is only part of the develop
 
 <details>
 <summary><code>Reviewed-by</code></summary>
-<p><code>
-<a href="https://git.kernel.org/linus/6a7ee50f8f56dc181e1150cc101896053b02d220">6a7ee50f8f56</a> ("ARM: disallow pre-ARMv5 builds with ld.lld")<br/>
+<p><code><a href="https://git.kernel.org/linus/6a7ee50f8f56dc181e1150cc101896053b02d220">6a7ee50f8f56</a> ("ARM: disallow pre-ARMv5 builds with ld.lld")<br/>
 <a href="https://git.kernel.org/linus/87d599fc3955e59b1ed30f350321a4be5353f945">87d599fc3955</a> ("kbuild: ensure Make >= 3.82 is used")<br/>
 <a href="https://git.kernel.org/linus/fccb3d3eda8d19b893e1fd18e8c70b78784b2a72">fccb3d3eda8d</a> ("kbuild: add test-{ge,gt,le,lt} macros")<br/>
 <a href="https://git.kernel.org/linus/80b6093b55e31c2c40ff082fb32523d4e852954f">80b6093b55e3</a> ("kbuild: add -Wundef to KBUILD_CPPFLAGS for W=1 builds")<br/>
@@ -319,8 +316,7 @@ It is important to keep in mind that sending patches is only part of the develop
 
 <details>
 <summary><code>Tested-by</code></summary>
-<p><code>
-<a href="https://git.kernel.org/linus/e287bd005ad9d85dd6271dd795d3ecfb6bca46ad">e287bd005ad9</a> ("KVM: SVM: restore host save area from assembly")<br/>
+<p><code><a href="https://git.kernel.org/linus/e287bd005ad9d85dd6271dd795d3ecfb6bca46ad">e287bd005ad9</a> ("KVM: SVM: restore host save area from assembly")<br/>
 <a href="https://git.kernel.org/linus/defbab270d45e32b068e7e73c3567232d745c60f">defbab270d45</a> ("include/uapi/linux/swab: Fix potentially missing __always_inline")<br/>
 <a href="https://git.kernel.org/linus/1d2e9b67b001f8c0d10138797b9df4779609c03c">1d2e9b67b001</a> ("ARM: 9265/1: pass -march= only to compiler")<br/>
 <a href="https://git.kernel.org/linus/a2faac39866d0313f3ca59c36a9f4e077faf4f53">a2faac39866d</a> ("ARM: 9263/1: use .arch directives instead of assembler command line flags")<br/>
@@ -427,8 +423,7 @@ Like previously, I have included the `git log` output with direct links to commi
 
 <details>
 <summary>boot-utils (<a href="https://github.com/ClangBuiltLinux/boot-utils/commits/main?author=nathanchance">GitHub</a>)</summary>
-<p><code>
-<a href="https://github.com/ClangBuiltLinux/boot-utils/commit/772eb24d1c0186620c86bba81ff0e0fd64b25464">772eb24</a> ("boot-qemu.py: Check gdb_bin earlier")<br/>
+<p><code><a href="https://github.com/ClangBuiltLinux/boot-utils/commit/772eb24d1c0186620c86bba81ff0e0fd64b25464">772eb24</a> ("boot-qemu.py: Check gdb_bin earlier")<br/>
 <a href="https://github.com/ClangBuiltLinux/boot-utils/commit/867976c2befc21009f7f5d24872218eae4a273e1">867976c</a> ("boot-qemu.py: Simplify can_use_kvm()")<br/>
 <a href="https://github.com/ClangBuiltLinux/boot-utils/commit/581efc6c5066eb7d2f2ae21bac94260f263cd07f">581efc6</a> ("boot-qemu.py: Update unsupported EFI boot message")<br/>
 <a href="https://github.com/ClangBuiltLinux/boot-utils/commit/3da9dd2b9413b729a2c7232835a38cddc827287f">3da9dd2</a> ("github workflows: Switch to new Python linting workflow")<br/>
@@ -492,8 +487,7 @@ Like previously, I have included the `git log` output with direct links to commi
 
 <details>
 <summary>containers (<a href="https://github.com/ClangBuiltLinux/containers/commits/main?author=nathanchance">GitHub</a>)</summary>
-<p><code>
-<a href="https://github.com/ClangBuiltLinux/containers/commit/9a511dd1ad89e71179566873c8180b6898a1bda0">9a511dd</a> ("github workflows: Switch to more robust Python linting workflow")<br/>
+<p><code><a href="https://github.com/ClangBuiltLinux/containers/commit/9a511dd1ad89e71179566873c8180b6898a1bda0">9a511dd</a> ("github workflows: Switch to more robust Python linting workflow")<br/>
 <a href="https://github.com/ClangBuiltLinux/containers/commit/6533047c36b6fbc88d38528fbd1b983e25ec9e0f">6533047</a> ("ci/install-vm.py: Disable pylint warning around invalid module name")<br/>
 <a href="https://github.com/ClangBuiltLinux/containers/commit/4784e520a97497b5de1cb23775dd9af7b7a80ae5">4784e52</a> ("ci/install-vm.py: Switch to f-strings")<br/>
 <a href="https://github.com/ClangBuiltLinux/containers/commit/533a9f54bc16393e7aade7bb4e9d1044367cd5e4">533a9f5</a> ("ci/install-vm.py: Shorten description to avoid flake8 warning")<br/>
@@ -551,8 +545,7 @@ Like previously, I have included the `git log` output with direct links to commi
 
 <details>
 <summary>continuous-integration2 (<a href="https://github.com/ClangBuiltLinux/continuous-integration2/commits/main?author=nathanchance">GitHub</a>)</summary>
-<p><code>
-<a href="https://github.com/ClangBuiltLinux/continuous-integration2/commit/65e2acc4f6c2f283b828932f9b4534bdb8188c2d">65e2acc</a> ("ci: Regenerate GitHub Actions workflow and TuxSuite files")<br/>
+<p><code><a href="https://github.com/ClangBuiltLinux/continuous-integration2/commit/65e2acc4f6c2f283b828932f9b4534bdb8188c2d">65e2acc</a> ("ci: Regenerate GitHub Actions workflow and TuxSuite files")<br/>
 <a href="https://github.com/ClangBuiltLinux/continuous-integration2/commit/9374a7e38510964e58e0f2d3af893d4ad87097ef">9374a7e</a> ("generator.yml: Disable CONFIG_IPMMU_VMSA for OpenSUSE's RISC-V config")<br/>
 <a href="https://github.com/ClangBuiltLinux/continuous-integration2/commit/3bc3f5cf0980d22923cdffbe1ff683fef05195f9">3bc3f5c</a> ("patches: Add patch for CONFIG_DRM_OFDRM=m and CONFIG_FB_OF=y")<br/>
 <a href="https://github.com/ClangBuiltLinux/continuous-integration2/commit/1913bdcdac3d0a8a9b660b5f798f878ef3d9649e">1913bdc</a> ("patches: next: Update for next-20221226")<br/>
@@ -948,8 +941,7 @@ Like previously, I have included the `git log` output with direct links to commi
 
 <details>
 <summary>tc-build (<a href="https://github.com/ClangBuiltLinux/tc-build/commits/main?author=nathanchance">GitHub</a>)</summary>
-<p><code>
-<a href="https://github.com/ClangBuiltLinux/tc-build/commit/ceaeaacb02f85cefb7f3d5f43224eabd61165616">ceaeaac</a> ("build-binutils.py: Disable internationalization unconditionally")<br/>
+<p><code><a href="https://github.com/ClangBuiltLinux/tc-build/commit/ceaeaacb02f85cefb7f3d5f43224eabd61165616">ceaeaac</a> ("build-binutils.py: Disable internationalization unconditionally")<br/>
 <a href="https://github.com/ClangBuiltLinux/tc-build/commit/ae85dae7a82e12f92c3e716ca7f6ea73b7fbd4d3">ae85dae</a> ("build-binutils.py: Disable gprofng on musl-based distros")<br/>
 <a href="https://github.com/ClangBuiltLinux/tc-build/commit/9c908bb6bff8ef44683a7f884e1a78796a525f51">9c908bb</a> ("build-binutils.py: Unwrap option lists and use unpacking for appending")<br/>
 <a href="https://github.com/ClangBuiltLinux/tc-build/commit/6ae83728a8d1ba5b0c1969c35aaef06ae37c4209">6ae8372</a> ("build-llvm.py: Disable COMPILER_RT_BUILD_GWP_ASAN when execinfo.h is not present")<br/>
@@ -1018,8 +1010,7 @@ Like previously, I have included the `git log` output with direct links to commi
 
 <details>
 <summary>TuxMake</summary>
-<p><code>
-<a href="https://gitlab.com/Linaro/tuxmake/-/commit/969446df28311c9d15f227f2fd0a12ab1463457f">969446d</a> ("docker: clang-android: Update to r458507 (15.0.1)")<br/>
+<p><code><a href="https://gitlab.com/Linaro/tuxmake/-/commit/969446df28311c9d15f227f2fd0a12ab1463457f">969446d</a> ("docker: clang-android: Update to r458507 (15.0.1)")<br/>
 <a href="https://gitlab.com/Linaro/tuxmake/-/commit/6a573a6b74b0c831a32dda16ca5b0fa076ae207d">6a573a6</a> (".gitlab-ci.yml: Wire up Arch Linux integration tests")<br/>
 <a href="https://gitlab.com/Linaro/tuxmake/-/commit/d21087b041f0878578fc331f7da470f412f0e5dc">d21087b</a> ("test/integration: Look for Arch Linux's shunit2")<br/>
 <a href="https://gitlab.com/Linaro/tuxmake/-/commit/f9b1fa9371bbfe5fa2af79d0ea945033a3c3bc9c">f9b1fa9</a> ("ci: Wire up Arch Linux package building")<br/>
