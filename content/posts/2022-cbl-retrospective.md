@@ -15,10 +15,21 @@ I have been contracting for the Linux Foundation for two years now, going onto t
 
 ## Linux kernel
 
-This year, I had 132 commits accepted and merged into mainline, which can either be viewed on [git.kernel.org](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Nathan+Chancellor) or in a Linux repository locally using the following command, which I have included the output of in the collapsible section below:
+This year, I had 132 commits accepted and merged into mainline. They can be viewed on the web or by running the following command in an up-to-date Linux repository locally using the following command:
+
+```
+$ git log \
+    --author='Nathan Chancellor' \
+    --oneline \
+    --since-as-filter='Jan 1, 2022' \
+    --until='Jan 1, 2023' \
+    origin/master
+```
+
+A similar command will be used to generate all following commit logs, which are included for convenience behind some collapsible Markdown with links.
 
 <details>
-<summary><code>git log --author='Nathan Chancellor' --since='Jan 1, 2022' --before='Jan 1, 2023'</code></summary>
+<summary>Kernel contributions in 2022 (<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Nathan+Chancellor">git.kernel.org</a>)</summary>
 <p><code><a href="https://git.kernel.org/linus/d6a9fb87e9d18f3394a9845546bbe868efdccfd2">d6a9fb87e9d1</a> ("security: Restrict CONFIG_ZERO_CALL_USED_REGS to gcc or clang > 15.0.6")<br/>
 <a href="https://git.kernel.org/linus/19331e84c3873256537d446afec1f6c507f8c4ef">19331e84c387</a> ("modpost: Include '.text.*' in TEXT_SECTIONS")<br/>
 <a href="https://git.kernel.org/linus/0d24f1b7cc65ee73ea8d04e0d10f77a7cb7a83f3">0d24f1b7cc65</a> ("padata: Mark padata_work_init() as __ref")<br/>
@@ -164,70 +175,40 @@ There are a few different commits that I am particularly proud of due to how the
 
 - `e9c281928c24 ("kbuild: Make $(LLVM) more flexible")`: While I cannot claim credit for the implementation of this commit, I am proud of this commit because it is addressing a core Linux kernel developer concern that was brought up to us, which allows them to continue to test with LLVM. It is very important to listen to developers and maintainers when they complain about our project because they are the ones we have to get buy in from. Our project could collapse if maintainers decide they do not want to put up with the idiosyncracies of building the kernel with LLVM or even worse, refuse to let the kernel be built with LLVM, [like `ld.gold`](https://git.kernel.org/linus/75959d44f9dc8e44410667009724e4e238515502). That is an obvious extreme that is unlikely at this point, especially when core maintainers have [openly accepted our approach to maintaining LLVM support](https://lore.kernel.org/87v8nbiaz7.ffs@tglx/), but it is important to remember that since the kernel and LLVM are always evolving, we have to be present and responsive at all times.
 
-It is important to keep in mind that sending patches is only part of the development process. The others are reporting problems and testing and reviewing solutions to those problems. The kernel keeps track of these through particular tags, which I have summarized below (I did not do much filtering so there will likely be duplicates across the lists).
+It is important to keep in mind that sending patches is only part of the development process. The others are reporting problems and testing and reviewing solutions to those problems. The kernel keeps track of these through particular tags: `Reported-by`, `Reviewed-by`, and `Tested-by`. In 2022, I provided those tags on 188 patches. The break down of patches that contained:
+
+- `Reported-by`: 48
+- `Reviewed-by`: 91
+- `Tested-by`: 84
+
+A full list of those commits are below, generated with the following command in an up-to-date Linux checkout:
+
+```
+$ git log \
+    --extended-regexp \
+    --grep='(Report|Review|Test)ed-by: Nathan Chancellor' \
+    --oneline \
+    --since-as-filter=01-01-2022 \
+    --until=01-01-2023
+```
 
 <details>
-<summary><code>Reported-by</code></summary>
-<p><code><a href="https://git.kernel.org/linus/980411a4d1bb925d28cd9e8d8301dc982ece788d">980411a4d1bb</a> ("powerpc/code-patching: Fix oops with DEBUG_VM enabled")<br/>
-<a href="https://git.kernel.org/linus/0ba09b1733878afe838fe35c310715fda3d46428">0ba09b173387</a> ("Revert "mm: align larger anonymous mappings on THP boundaries"")<br/>
-<a href="https://git.kernel.org/linus/d03407183d97554dfffea70f385b5bdd520f846c">d03407183d97</a> ("wifi: ath10k: fix QCOM_SMEM dependency")<br/>
-<a href="https://git.kernel.org/linus/beb3d47d1d3d7185bb401af628ad32ee204a9526">beb3d47d1d3d</a> ("bpf: Fix a BTF_ID_LIST bug with CONFIG_DEBUG_INFO_BTF not set")<br/>
-<a href="https://git.kernel.org/linus/32d495b0c3305546f4773b9aafcd4e90188ddb9e">32d495b0c330</a> ("Revert "arm64/mm: Drop redundant BUG_ON(!pgtable_alloc)"")<br/>
-<a href="https://git.kernel.org/linus/e287bd005ad9d85dd6271dd795d3ecfb6bca46ad">e287bd005ad9</a> ("KVM: SVM: restore host save area from assembly")<br/>
-<a href="https://git.kernel.org/linus/80ddf5ce1c9291cb175d52ed1227134ad48c47ee">80ddf5ce1c92</a> ("s390: always build relocatable kernel")<br/>
-<a href="https://git.kernel.org/linus/3220022038b9a3845eea762af85f1c5694b9f861">3220022038b9</a> ("ARM: 9256/1: NWFPE: avoid compiler-generated __aeabi_uldivmod")<br/>
-<a href="https://git.kernel.org/linus/03e9491fff252a7435e109333ec51ca2d619b759">03e9491fff25</a> ("pinctrl: qcom: lpass-lpi: Add missed bitfield.h")<br/>
-<a href="https://git.kernel.org/linus/f8fbf0dc702bf15b8b0ea1731a353bdb7faee8fd">f8fbf0dc702b</a> ("ASoC: SOF: fix compilation issue with readb/writeb helpers")<br/>
-<a href="https://git.kernel.org/linus/fb3041d61f6867158088c627c2790f94e208d1ea">fb3041d61f68</a> ("kbuild: fix SIGPIPE error message for AR=gcc-ar and AR=llvm-ar")<br/>
-<a href="https://git.kernel.org/linus/0e5b9f25b27a7a92880f88f5dba3edf726ec5f61">0e5b9f25b27a</a> ("overflow: disable failing tests for older clang versions")<br/>
-<a href="https://git.kernel.org/linus/fb2d14add4f813c73bd9d28b750315ccb3f5f0ea">fb2d14add4f8</a> ("Drivers: hv: vmbus: Split memcpy of flex-array")<br/>
-<a href="https://git.kernel.org/linus/37dcc673d065d9823576cd9f2484a72531e1cba6">37dcc673d065</a> ("frontswap: don't call ->init if no ops are registered")<br/>
-<a href="https://git.kernel.org/linus/0072dc1b53c39fb7c4cfc5c9e5d5a30622198613">0072dc1b53c3</a> ("arm64: avoid BUILD_BUG_ON() in alternative-macros")<br/>
-<a href="https://git.kernel.org/linus/06c1c49d0cd1d6cec5b78963109ba728e49e0063">06c1c49d0cd1</a> ("fortify: Adjust KUnit test for modular build")<br/>
-<a href="https://git.kernel.org/linus/a66de5283e16602b74658289360505ceeb308c90">a66de5283e16</a> ("powerpc/pseries: Fix plpks crash on non-pseries")<br/>
-<a href="https://git.kernel.org/linus/7245fc5bb7a966852d5bd7779d1f5855530b461a">7245fc5bb7a9</a> ("powerpc/math-emu: Remove -w build flag and fix warnings")<br/>
-<a href="https://git.kernel.org/linus/ea522b806162ca947427f8305310d3c8a3d42d7a">ea522b806162</a> ("platform/x86/amd/pmf: Fix clang unused variable warning")<br/>
-<a href="https://git.kernel.org/linus/b7bf23c0865faac61564425ddc96a4a79ebf19b0">b7bf23c0865f</a> ("ASoC: SOF: ipc3-topology: Fix clang -Wformat warning")<br/>
-<a href="https://git.kernel.org/linus/b5276c924497705ca927ad85a763c37f2de98349">b5276c924497</a> ("drivers: lkdtm: fix clang -Wformat warning")<br/>
-<a href="https://git.kernel.org/linus/b4909252da9be56fe1e0a23c2c1908c5630525fa">b4909252da9b</a> ("drivers: lkdtm: fix clang -Wformat warning")<br/>
-<a href="https://git.kernel.org/linus/b321823a03dc81a5b83b063e6e1904d612b53266">b321823a03dc</a> ("io_uring: fix io_poll_remove_all clang warnings")<br/>
-<a href="https://git.kernel.org/linus/f066b8f7d961b0f3ec08678a27f2f1a2f0148380">f066b8f7d961</a> ("drivers: iommu: fix clang -wformat warning")<br/>
-<a href="https://git.kernel.org/linus/1e744351bcb9c4cee81300de5a6097100d835386">1e744351bcb9</a> ("ASoC: Intel: avs: Use lookup table to create modules")<br/>
-<a href="https://git.kernel.org/linus/9950f11211331180269867aef848c7cf56861742">9950f1121133</a> ("can: pch_can: pch_can_error(): initialize errc before using it")<br/>
-<a href="https://git.kernel.org/linus/bdd0d7e290e0e4c8f7545fff89770abbd22bd51a">bdd0d7e290e0</a> ("drm/amd/display: fix non-x86/PPC64 compilation")<br/>
-<a href="https://git.kernel.org/linus/2fd26970cf66bd52dc42843c46968040caa8c9a1">2fd26970cf66</a> ("Revert "kernfs: Change kernfs_notify_list to llist."")<br/>
-<a href="https://git.kernel.org/linus/c0c87382c1a6985cd12a49a62a893361e5fd1b8f">c0c87382c1a6</a> ("drm/amdgpu/display: fix build when CONFIG_DEBUG_FS is not set")<br/>
-<a href="https://git.kernel.org/linus/90f4b5499cdd94be3c1e856375ecd7d5f9c4cecc">90f4b5499cdd</a> ("rtw88: 8821c: fix access const table of channel parameters")<br/>
-<a href="https://git.kernel.org/linus/9be4cbd09da820a20d400670a45fc1571f6a13b8">9be4cbd09da8</a> ("driver core: Set default deferred_probe_timeout back to 0.")<br/>
-<a href="https://git.kernel.org/linus/5ee76c256e928455212ab759c51d198fedbe7523">5ee76c256e92</a> ("driver core: Fix wait_for_device_probe() & deferred_probe_timeout interaction")<br/>
-<a href="https://git.kernel.org/linus/e15db62bc5648ab459a570862f654e787c498faf">e15db62bc564</a> ("swiotlb: fix setting ->force_bounce")<br/>
-<a href="https://git.kernel.org/linus/ead165fa1042247b033afad7be4be9b815d04ade">ead165fa1042</a> ("objtool: Fix symbol creation")<br/>
-<a href="https://git.kernel.org/linus/5eefe17c7ae41bac4d2d281669e8357a10f4d5a4">5eefe17c7ae4</a> ("libbpf: Clean up ringbuf size adjustment implementation")<br/>
-<a href="https://git.kernel.org/linus/9d79799193b728b62c9899d931b5009da1f89b67">9d79799193b7</a> ("fbcon: Fix delayed takeover locking")<br/>
-<a href="https://git.kernel.org/linus/60210a3d86dc57ce4a76a366e7841dda746a33f7">60210a3d86dc</a> ("riscv module: remove (NOLOAD)")<br/>
-<a href="https://git.kernel.org/linus/faf79934e65aff90284725518a5ec3c2241c65ae">faf79934e65a</a> ("s390/alternatives: avoid using jgnop mnemonic")<br/>
-<a href="https://git.kernel.org/linus/b847bd64ea9f484510e27065cb2bccc58d9b829b">b847bd64ea9f</a> ("MIPS: Only use current_stack_pointer on GCC")<br/>
-<a href="https://git.kernel.org/linus/d55957fb299b74829c438f77fe29896e3aed39fc">d55957fb299b</a> ("drm/amdkfd: bail out early if no get_atc_vmid_pasid_mapping_info")<br/>
-<a href="https://git.kernel.org/linus/4013e26670c590944abdab56c4fa797527b74325">4013e26670c5</a> ("arm64: module: remove (NOLOAD) from linker script")<br/>
-<a href="https://git.kernel.org/linus/5790597d7113faabb1714d3d1efa268e36eb4811">5790597d7113</a> ("spi: Fix warning for Clang build and simplify code")<br/>
-<a href="https://git.kernel.org/linus/6bf625a4140f24b490766043b307f8252519578b">6bf625a4140f</a> ("Drivers: hv: vmbus: Rework use of DMA_BIT_MASK(64)")<br/>
-<a href="https://git.kernel.org/linus/b7892f7d5cb2b8187c603dd8ea3a7c44059ccfc2">b7892f7d5cb2</a> ("tools: Ignore errors from `which' when searching a GCC toolchain")<br/>
-<a href="https://git.kernel.org/linus/25d2e41cf59bd6ccd23adc2965a157053bc3ed5c">25d2e41cf59b</a> ("pinctrl: thunderbay: rework loops looking for groups names")<br/>
-<a href="https://git.kernel.org/linus/2056e2989bf47ad7274ecc5e9dda2add53c112f9">2056e2989bf4</a> ("x86/sgx: Fix NULL pointer dereference on non-SGX systems")<br/>
-<a href="https://git.kernel.org/linus/5d9224fb076e9a2023e0b06d6a164d644612c0c0">5d9224fb076e</a> ("scsi: hisi_sas: Remove unused variable and check in hisi_sas_send_ata_reset_each_phy()")<br/>
-</code></p>
-</details>
-
-<details>
-<summary><code>Reviewed-by</code></summary>
+<summary><code>Reported-by, Reviewed-by, and Tested-by</code></summary>
 <p><code><a href="https://git.kernel.org/linus/6a7ee50f8f56dc181e1150cc101896053b02d220">6a7ee50f8f56</a> ("ARM: disallow pre-ARMv5 builds with ld.lld")<br/>
+<a href="https://git.kernel.org/linus/980411a4d1bb925d28cd9e8d8301dc982ece788d">980411a4d1bb</a> ("powerpc/code-patching: Fix oops with DEBUG_VM enabled")<br/>
 <a href="https://git.kernel.org/linus/87d599fc3955e59b1ed30f350321a4be5353f945">87d599fc3955</a> ("kbuild: ensure Make >= 3.82 is used")<br/>
 <a href="https://git.kernel.org/linus/fccb3d3eda8d19b893e1fd18e8c70b78784b2a72">fccb3d3eda8d</a> ("kbuild: add test-{ge,gt,le,lt} macros")<br/>
 <a href="https://git.kernel.org/linus/80b6093b55e31c2c40ff082fb32523d4e852954f">80b6093b55e3</a> ("kbuild: add -Wundef to KBUILD_CPPFLAGS for W=1 builds")<br/>
 <a href="https://git.kernel.org/linus/efa80b028c7a9c74fd875517aa0fc9fd8d610ed0">efa80b028c7a</a> ("kbuild: move -Werror from KBUILD_CFLAGS to KBUILD_CPPFLAGS")<br/>
+<a href="https://git.kernel.org/linus/0ba09b1733878afe838fe35c310715fda3d46428">0ba09b173387</a> ("Revert "mm: align larger anonymous mappings on THP boundaries"")<br/>
+<a href="https://git.kernel.org/linus/d03407183d97554dfffea70f385b5bdd520f846c">d03407183d97</a> ("wifi: ath10k: fix QCOM_SMEM dependency")<br/>
+<a href="https://git.kernel.org/linus/beb3d47d1d3d7185bb401af628ad32ee204a9526">beb3d47d1d3d</a> ("bpf: Fix a BTF_ID_LIST bug with CONFIG_DEBUG_INFO_BTF not set")<br/>
+<a href="https://git.kernel.org/linus/32d495b0c3305546f4773b9aafcd4e90188ddb9e">32d495b0c330</a> ("Revert "arm64/mm: Drop redundant BUG_ON(!pgtable_alloc)"")<br/>
 <a href="https://git.kernel.org/linus/9f8fe647797a4bc049bc7cceaf3a63584678ba04">9f8fe647797a</a> ("Makefile.debug: support for -gz=zstd")<br/>
 <a href="https://git.kernel.org/linus/23df39fc6a36183af5e6e4f47523f1ad2cdc1d30">23df39fc6a36</a> ("locking: Fix qspinlock/x86 inline asm error")<br/>
 <a href="https://git.kernel.org/linus/612d80784fdc0c2e2ee2e2d901a55ef2f72ebf4b">612d80784fdc</a> ("MIPS: fix duplicate definitions for exported symbols")<br/>
+<a href="https://git.kernel.org/linus/e287bd005ad9d85dd6271dd795d3ecfb6bca46ad">e287bd005ad9</a> ("KVM: SVM: restore host save area from assembly")<br/>
+<a href="https://git.kernel.org/linus/defbab270d45e32b068e7e73c3567232d745c60f">defbab270d45</a> ("include/uapi/linux/swab: Fix potentially missing __always_inline")<br/>
 <a href="https://git.kernel.org/linus/f39556bc2530c83a22bc11b73c7a46df9a340685">f39556bc2530</a> ("compiler-gcc: document minimum version for `__no_sanitize_coverage__`")<br/>
 <a href="https://git.kernel.org/linus/689540cbda7f69594ae5e13fef4c8239519d8b66">689540cbda7f</a> ("compiler-gcc: remove attribute support check for `__no_sanitize_undefined__`")<br/>
 <a href="https://git.kernel.org/linus/095ac0763ac507dd4e1a71ad9784f49f51498483">095ac0763ac5</a> ("compiler-gcc: remove attribute support check for `__no_sanitize_thread__`")<br/>
@@ -235,101 +216,34 @@ It is important to keep in mind that sending patches is only part of the develop
 <a href="https://git.kernel.org/linus/6e2be1f2ebcea42ed6044432f72f32434e60b34d">6e2be1f2ebce</a> ("compiler-gcc: be consistent with underscores use for `no_sanitize`")<br/>
 <a href="https://git.kernel.org/linus/1d2e9b67b001f8c0d10138797b9df4779609c03c">1d2e9b67b001</a> ("ARM: 9265/1: pass -march= only to compiler")<br/>
 <a href="https://git.kernel.org/linus/26b12e084bce78f339bf9069ff25e0128313d9bc">26b12e084bce</a> ("ARM: 9264/1: only use -mtp=cp15 for the compiler")<br/>
-<a href="https://git.kernel.org/linus/5aa4860eb50f3700e3175759f608bcfb68d0d6ae">5aa4860eb50f</a> ("ARM: 9262/1: remove lazy evaluation in Makefile")<br/>
-<a href="https://git.kernel.org/linus/e1789d7c752ed001cf1a4bbbd624f70a7dd3c6db">e1789d7c752e</a> ("kbuild: upgrade the orphan section warning to an error if CONFIG_WERROR is set")<br/>
-<a href="https://git.kernel.org/linus/fc007fb815ab5395c3962c09b79a1630b0fbed9c">fc007fb815ab</a> ("drm/imx: imx-tve: Fix return type of imx_tve_connector_mode_valid")<br/>
-<a href="https://git.kernel.org/linus/aae538cd03bc8fc35979653d9180922d146da0ca">aae538cd03bc</a> ("riscv: fix detection of toolchain Zihintpause support")<br/>
-<a href="https://git.kernel.org/linus/b8c86872d1dc171d8f1c137917d6913cae2fa4f2">b8c86872d1dc</a> ("riscv: fix detection of toolchain Zicbom support")<br/>
-<a href="https://git.kernel.org/linus/80e5acb6dd72b25a6e6527443b9e9c1c3a7bcef6">80e5acb6dd72</a> ("wifi: rtl8xxxu: Fix reads of uninitialized variables hw_ctrl_s1, sw_ctrl_s1")<br/>
-<a href="https://git.kernel.org/linus/8e5bad7dccec2014f24497b57d8a8ee0b752c290">8e5bad7dccec</a> ("sched: Introduce struct balance_callback to avoid CFI mismatches")<br/>
-<a href="https://git.kernel.org/linus/c67a85bee78db74c6889a5ca645c3763ad23d863">c67a85bee78d</a> ("kbuild: add -fno-discard-value-names to cmd_cc_ll_c")<br/>
-<a href="https://git.kernel.org/linus/bb1435f3f575b5213eaf27434efa3971f51c01de">bb1435f3f575</a> ("Kconfig.debug: add toolchain checks for DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT")<br/>
-<a href="https://git.kernel.org/linus/4f001a21080ff2e2f0e1c3692f5e119aedbb3bc1">4f001a21080f</a> ("Kconfig.debug: simplify the dependency of DEBUG_INFO_DWARF4/5")<br/>
-<a href="https://git.kernel.org/linus/450a580fc4b5e7f7fb8d9b1a0208bf0d1efc53a8">450a580fc4b5</a> ("net: lan966x: Fix return type of lan966x_port_xmit")<br/>
-<a href="https://git.kernel.org/linus/0f1fe9d6168306cd003d26dfdbb3bf3e79643e78">0f1fe9d61683</a> ("Revert "kbuild: Check if linker supports the -X option"")<br/>
-<a href="https://git.kernel.org/linus/0b33a33bd15d5bab73b87152b220a8d0153a4587">0b33a33bd15d</a> ("drm/msm: Fix return type of mdp4_lvds_connector_mode_valid")<br/>
-<a href="https://git.kernel.org/linus/88b61e3bff93f99712718db785b4aa0c1165f35c">88b61e3bff93</a> ("Makefile.compiler: replace cc-ifversion with compiler-specific macros")<br/>
-<a href="https://git.kernel.org/linus/9512d5f8e34fb7c92be6179dc48ba5f0b9b922ac">9512d5f8e34f</a> ("staging: r8188eu: Fix return type of rtw_xmit_entry")<br/>
-<a href="https://git.kernel.org/linus/b77599043f00fce9253d0f22522c5d5b521555ce">b77599043f00</a> ("staging: octeon: Fix return type of cvm_oct_xmit and cvm_oct_xmit_pow")<br/>
-<a href="https://git.kernel.org/linus/2851349ac351010a2649e0ff86a1e3d68fe5d683">2851349ac351</a> ("staging: rtl8192u: Fix return type of ieee80211_xmit")<br/>
-<a href="https://git.kernel.org/linus/32ef9e5054ec0321b9336058c58ec749e9c6b0fe">32ef9e5054ec</a> ("Makefile.debug: re-enable debug info for .S files")<br/>
-<a href="https://git.kernel.org/linus/61f2b7c7497ba96cdde5bbaeb9e07f4c48f41f97">61f2b7c7497b</a> ("Makefile.debug: set -g unconditional on CONFIG_DEBUG_INFO_SPLIT")<br/>
-<a href="https://git.kernel.org/linus/237fe72749425f2cd3132bf54fa6b98807c27938">237fe7274942</a> ("scripts/clang-tools: remove unused module")<br/>
-<a href="https://git.kernel.org/linus/8bb7c4f8c9276eb61f7f39cc107f67a0e81de610">8bb7c4f8c927</a> ("openvswitch: Change the return type for vport_ops.send function hook to int")<br/>
-<a href="https://git.kernel.org/linus/106c67ce46f3c82dd276e983668a91d6ed631173">106c67ce46f3</a> ("net: korina: Fix return type of korina_send_packet")<br/>
-<a href="https://git.kernel.org/linus/40662333dd7c64664247a6138bc33f3974e3a331">40662333dd7c</a> ("net: ethernet: litex: Fix return type of liteeth_start_xmit")<br/>
-<a href="https://git.kernel.org/linus/5972ca946098487c5155fe13654743f9010f5ed5">5972ca946098</a> ("net: ethernet: ti: davinci_emac: Fix return type of emac_dev_xmit")<br/>
-<a href="https://git.kernel.org/linus/0191580b000d50089a0b351f7cdbec4866e3d0d2">0191580b000d</a> ("net: davicom: Fix return type of dm9000_start_xmit")<br/>
-<a href="https://git.kernel.org/linus/21f0b7dabf9c358e75a539b5554c0375bf1abe0a">21f0b7dabf9c</a> ("drm/i915: Fix return type of mode_valid function hook")<br/>
-<a href="https://git.kernel.org/linus/b0b9408f132623dc88e78adb5282f74e4b64bb57">b0b9408f1326</a> ("drm/rockchip: Fix return type of cdn_dp_connector_mode_valid")<br/>
-<a href="https://git.kernel.org/linus/7245fc5bb7a966852d5bd7779d1f5855530b461a">7245fc5bb7a9</a> ("powerpc/math-emu: Remove -w build flag and fix warnings")<br/>
-<a href="https://git.kernel.org/linus/b0839b281c427e844143dba3893e25c83cdd6c17">b0839b281c42</a> ("Makefile.extrawarn: re-enable -Wformat for clang; take 2")<br/>
-<a href="https://git.kernel.org/linus/4ffb4d25ef1251d57881da183d6bec7f2dfe1e32">4ffb4d25ef12</a> ("wifi: rtw88: fix uninitialized use of primary channel index")<br/>
-<a href="https://git.kernel.org/linus/ea522b806162ca947427f8305310d3c8a3d42d7a">ea522b806162</a> ("platform/x86/amd/pmf: Fix clang unused variable warning")<br/>
-<a href="https://git.kernel.org/linus/a0a12c3ed057af57552bf6c0aeaca6835693df04">a0a12c3ed057</a> ("asm goto: eradicate CC_HAS_ASM_GOTO")<br/>
-<a href="https://git.kernel.org/linus/c9a1dd673f28da9624776e75b78ae04125544852">c9a1dd673f28</a> ("rtc: zynqmp: initialize fract_tick")<br/>
-<a href="https://git.kernel.org/linus/b7bf23c0865faac61564425ddc96a4a79ebf19b0">b7bf23c0865f</a> ("ASoC: SOF: ipc3-topology: Fix clang -Wformat warning")<br/>
-<a href="https://git.kernel.org/linus/b5276c924497705ca927ad85a763c37f2de98349">b5276c924497</a> ("drivers: lkdtm: fix clang -Wformat warning")<br/>
-<a href="https://git.kernel.org/linus/b4909252da9be56fe1e0a23c2c1908c5630525fa">b4909252da9b</a> ("drivers: lkdtm: fix clang -Wformat warning")<br/>
-<a href="https://git.kernel.org/linus/f066b8f7d961b0f3ec08678a27f2f1a2f0148380">f066b8f7d961</a> ("drivers: iommu: fix clang -wformat warning")<br/>
-<a href="https://git.kernel.org/linus/9950f11211331180269867aef848c7cf56861742">9950f1121133</a> ("can: pch_can: pch_can_error(): initialize errc before using it")<br/>
-<a href="https://git.kernel.org/linus/aa8c7cdbae58b695ed79a0129b6b8c887b25969f">aa8c7cdbae58</a> ("netfilter: xt_TPROXY: remove pr_debug invocations")<br/>
-<a href="https://git.kernel.org/linus/5b47d2364652979dc43df14f7af19346a001b770">5b47d2364652</a> ("net: rxrpc: fix clang -Wformat warning")<br/>
-<a href="https://git.kernel.org/linus/ffff4913c7e22cc2bd5570df73e0e154bf111215">ffff4913c7e2</a> ("eeprom: idt_89hpesx: fix clang -Wformat warnings")<br/>
-<a href="https://git.kernel.org/linus/291810be4227564403807e663f3ec8d3b3d6ba34">291810be4227</a> ("Documentation/llvm: Update Supported Arch table")<br/>
-<a href="https://git.kernel.org/linus/d30dfd490f7dc4cb6a7c11a647bd1ff7a22139e7">d30dfd490f7d</a> ("include/uapi/linux/swab.h: move explicit cast outside ternary")<br/>
-<a href="https://git.kernel.org/linus/01ece65132e2980ece4eca91105dfc9eed504881">01ece65132e2</a> ("drm/ssd130x: Only define a SPI device ID table when built as a module")<br/>
-<a href="https://git.kernel.org/linus/0e900029655327bb5326ced02eff97667a079039">0e9000296553</a> ("ipc/sem: remove redundant assignments")<br/>
-<a href="https://git.kernel.org/linus/7374fa33dc2dd76b71999f8fd236e73b21161030">7374fa33dc2d</a> ("init/Kconfig: remove USELIB syscall by default")<br/>
-<a href="https://git.kernel.org/linus/e6f3b3c9c109ed57230996cf4a4c1b8ae7e36a81">e6f3b3c9c109</a> ("cfi: Use __builtin_function_start")<br/>
-<a href="https://git.kernel.org/linus/1754cea1763e2bdc6a2153220440fe9aa9e0f2c9">1754cea1763e</a> ("drm/amd/display: fix 64 bit divide in freesync code")<br/>
-<a href="https://git.kernel.org/linus/334865b2915c33080624e0d06f1c3e917036472c">334865b2915c</a> ("x86/extable: Prefer local labels in .set directives")<br/>
-<a href="https://git.kernel.org/linus/22ef7ee3eeb2a41e07f611754ab9a2663232fedf">22ef7ee3eeb2</a> ("PCI: hv: Remove unused hv_set_msi_entry_from_desc()")<br/>
-<a href="https://git.kernel.org/linus/9fbed27a7a1101c926718dfa9b49aff1d04477b5">9fbed27a7a11</a> ("kbuild: add --target to correctly cross-compile UAPI headers with Clang")<br/>
-<a href="https://git.kernel.org/linus/b027471adaf955efde6153d67f391fe1604b7292">b027471adaf9</a> ("Revert "ubsan, kcsan: Don't combine sanitizer with kcov on clang"")<br/>
-<a href="https://git.kernel.org/linus/14e83077d55ff4b88fe39f5e98fb8230c2ccb4fb">14e83077d55f</a> ("include: drop pointless __compiler_offsetof indirection")<br/>
-<a href="https://git.kernel.org/linus/f9b3cd24578401e7a392974b3353277286e49cee">f9b3cd245784</a> ("Kconfig.debug: make DEBUG_INFO selectable from a choice")<br/>
-<a href="https://git.kernel.org/linus/ffea9fb319360b9ead8befac6bb2db2b54fd53e6">ffea9fb31936</a> ("sched/headers: ARM needs asm/paravirt_api_clock.h too")<br/>
-<a href="https://git.kernel.org/linus/c7500c1b53bfc083e8968cdce13a5a9d1ca9bf83">c7500c1b53bf</a> ("um: Allow builds with Clang")<br/>
-<a href="https://git.kernel.org/linus/a8ae15ead9c9d10671c3f76cb0749dec6e571ce7">a8ae15ead9c9</a> ("ASoC: atmel: mchp-pdmc: Fix `-Wpointer-bool-conversion` warning")<br/>
-<a href="https://git.kernel.org/linus/b847bd64ea9f484510e27065cb2bccc58d9b829b">b847bd64ea9f</a> ("MIPS: Only use current_stack_pointer on GCC")<br/>
-<a href="https://git.kernel.org/linus/1e24078113ae69c741cb1b03375a9f1490db7308">1e24078113ae</a> ("Kbuild: use -std=gnu11 for KBUILD_USERCFLAGS")<br/>
-<a href="https://git.kernel.org/linus/e8c07082a810fbb9db303a2b66b66b8d7e588b53">e8c07082a810</a> ("Kbuild: move to -std=gnu11")<br/>
-<a href="https://git.kernel.org/linus/4d94f910e79a349b00a4f8aab6f3ae87129d8c5a">4d94f910e79a</a> ("Kbuild: use -Wdeclaration-after-statement")<br/>
-<a href="https://git.kernel.org/linus/1344794a59db2bd44b4919d2d75300fd3b1c2cd7">1344794a59db</a> ("Kbuild: add -Wno-shift-negative-value where -Wextra is used")<br/>
-<a href="https://git.kernel.org/linus/6580c5c18fb3df2b11c5e0452372f815deeff895">6580c5c18fb3</a> ("um: clang: Strip out -mno-global-merge from USER_CFLAGS")<br/>
-<a href="https://git.kernel.org/linus/afcf5441b9ff22ac57244cd45ff102ebc2e32d1a">afcf5441b9ff</a> ("arm64: Add gcc Shadow Call Stack support")<br/>
-<a href="https://git.kernel.org/linus/330f4c53d3c2d8b11d86ec03a964b86dc81452f5">330f4c53d3c2</a> ("ARM: fix build error when BPF_SYSCALL is disabled")<br/>
-<a href="https://git.kernel.org/linus/925088781eede43cf6616a1197c31dee451b7948">925088781eed</a> ("KVM: x86: Fix pointer mistmatch warning when patching RET0 static calls")<br/>
-<a href="https://git.kernel.org/linus/d4c858643263cfde13f7d937eaff95c2ed87cdf1">d4c858643263</a> ("kallsyms: ignore all local labels prefixed by '.L'")<br/>
-<a href="https://git.kernel.org/linus/baf682144ecacae4b98597daa636ce7b2b3143f6">baf682144eca</a> ("drm/i915: fix build issue when using clang")<br/>
-<a href="https://git.kernel.org/linus/efa90c11f62e6b7252fb75efe2787056872a627c">efa90c11f62e</a> ("stack: Constrain and fix stack offset randomization with Clang builds")<br/>
-<a href="https://git.kernel.org/linus/8cb37a5974a48569aab8a1736d21399fddbdbdb2">8cb37a5974a4</a> ("stack: Introduce CONFIG_RANDOMIZE_KSTACK_OFFSET")<br/>
-<a href="https://git.kernel.org/linus/818ab43fc56ad978cbb7c0ffdc9a332fd2f23a23">818ab43fc56a</a> ("fortify: Update compile-time tests for Clang 14")<br/>
-<a href="https://git.kernel.org/linus/6bf625a4140f24b490766043b307f8252519578b">6bf625a4140f</a> ("Drivers: hv: vmbus: Rework use of DMA_BIT_MASK(64)")<br/>
-<a href="https://git.kernel.org/linus/b7892f7d5cb2b8187c603dd8ea3a7c44059ccfc2">b7892f7d5cb2</a> ("tools: Ignore errors from `which' when searching a GCC toolchain")<br/>
-<a href="https://git.kernel.org/linus/b470947c3672f7eb7c4c271d510383d896831cc2">b470947c3672</a> ("usb: dwc3: xilinx: fix uninitialized return value")<br/>
-<a href="https://git.kernel.org/linus/bece04b5b41dd7730dd06aec0d6b15c53d1fbb5a">bece04b5b41d</a> ("kcov: fix generic Kconfig dependencies if ARCH_WANTS_NO_INSTR")<br/>
-<a href="https://git.kernel.org/linus/35140d399db2b67153fc53b51a97ddb8ba3b5956">35140d399db2</a> ("script/sorttable: Fix some initialization problems")<br/>
-</code></p>
-</details>
-
-<details>
-<summary><code>Tested-by</code></summary>
-<p><code><a href="https://git.kernel.org/linus/e287bd005ad9d85dd6271dd795d3ecfb6bca46ad">e287bd005ad9</a> ("KVM: SVM: restore host save area from assembly")<br/>
-<a href="https://git.kernel.org/linus/defbab270d45e32b068e7e73c3567232d745c60f">defbab270d45</a> ("include/uapi/linux/swab: Fix potentially missing __always_inline")<br/>
-<a href="https://git.kernel.org/linus/1d2e9b67b001f8c0d10138797b9df4779609c03c">1d2e9b67b001</a> ("ARM: 9265/1: pass -march= only to compiler")<br/>
 <a href="https://git.kernel.org/linus/a2faac39866d0313f3ca59c36a9f4e077faf4f53">a2faac39866d</a> ("ARM: 9263/1: use .arch directives instead of assembler command line flags")<br/>
 <a href="https://git.kernel.org/linus/80ddf5ce1c9291cb175d52ed1227134ad48c47ee">80ddf5ce1c92</a> ("s390: always build relocatable kernel")<br/>
+<a href="https://git.kernel.org/linus/5aa4860eb50f3700e3175759f608bcfb68d0d6ae">5aa4860eb50f</a> ("ARM: 9262/1: remove lazy evaluation in Makefile")<br/>
 <a href="https://git.kernel.org/linus/3220022038b9a3845eea762af85f1c5694b9f861">3220022038b9</a> ("ARM: 9256/1: NWFPE: avoid compiler-generated __aeabi_uldivmod")<br/>
 <a href="https://git.kernel.org/linus/bce5a1e8a34006a5e80213ede5e5c465d53f1dce">bce5a1e8a340</a> ("x86/mem: Move memmove to out of line assembler")<br/>
 <a href="https://git.kernel.org/linus/e1789d7c752ed001cf1a4bbbd624f70a7dd3c6db">e1789d7c752e</a> ("kbuild: upgrade the orphan section warning to an error if CONFIG_WERROR is set")<br/>
 <a href="https://git.kernel.org/linus/62e1cbfc5d795381a0f237ae7ee229a92d51cf9e">62e1cbfc5d79</a> ("fortify: Short-circuit known-safe calls to strscpy()")<br/>
 <a href="https://git.kernel.org/linus/41eefc46a3a4682976afb5f8c4b9734ed6bfd406">41eefc46a3a4</a> ("string: Convert strscpy() self-test to KUnit")<br/>
+<a href="https://git.kernel.org/linus/03e9491fff252a7435e109333ec51ca2d619b759">03e9491fff25</a> ("pinctrl: qcom: lpass-lpi: Add missed bitfield.h")<br/>
+<a href="https://git.kernel.org/linus/fc007fb815ab5395c3962c09b79a1630b0fbed9c">fc007fb815ab</a> ("drm/imx: imx-tve: Fix return type of imx_tve_connector_mode_valid")<br/>
+<a href="https://git.kernel.org/linus/f8fbf0dc702bf15b8b0ea1731a353bdb7faee8fd">f8fbf0dc702b</a> ("ASoC: SOF: fix compilation issue with readb/writeb helpers")<br/>
 <a href="https://git.kernel.org/linus/fb3041d61f6867158088c627c2790f94e208d1ea">fb3041d61f68</a> ("kbuild: fix SIGPIPE error message for AR=gcc-ar and AR=llvm-ar")<br/>
+<a href="https://git.kernel.org/linus/aae538cd03bc8fc35979653d9180922d146da0ca">aae538cd03bc</a> ("riscv: fix detection of toolchain Zihintpause support")<br/>
+<a href="https://git.kernel.org/linus/b8c86872d1dc171d8f1c137917d6913cae2fa4f2">b8c86872d1dc</a> ("riscv: fix detection of toolchain Zicbom support")<br/>
+<a href="https://git.kernel.org/linus/0e5b9f25b27a7a92880f88f5dba3edf726ec5f61">0e5b9f25b27a</a> ("overflow: disable failing tests for older clang versions")<br/>
+<a href="https://git.kernel.org/linus/80e5acb6dd72b25a6e6527443b9e9c1c3a7bcef6">80e5acb6dd72</a> ("wifi: rtl8xxxu: Fix reads of uninitialized variables hw_ctrl_s1, sw_ctrl_s1")<br/>
+<a href="https://git.kernel.org/linus/8e5bad7dccec2014f24497b57d8a8ee0b752c290">8e5bad7dccec</a> ("sched: Introduce struct balance_callback to avoid CFI mismatches")<br/>
+<a href="https://git.kernel.org/linus/c67a85bee78db74c6889a5ca645c3763ad23d863">c67a85bee78d</a> ("kbuild: add -fno-discard-value-names to cmd_cc_ll_c")<br/>
 <a href="https://git.kernel.org/linus/3cebf80e9a0d3adcb174053be32c88a640b3344b">3cebf80e9a0d</a> ("riscv: Pass -mno-relax only on lld < 15.0.0")<br/>
+<a href="https://git.kernel.org/linus/bb1435f3f575b5213eaf27434efa3971f51c01de">bb1435f3f575</a> ("Kconfig.debug: add toolchain checks for DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT")<br/>
+<a href="https://git.kernel.org/linus/4f001a21080ff2e2f0e1c3692f5e119aedbb3bc1">4f001a21080f</a> ("Kconfig.debug: simplify the dependency of DEBUG_INFO_DWARF4/5")<br/>
+<a href="https://git.kernel.org/linus/450a580fc4b5e7f7fb8d9b1a0208bf0d1efc53a8">450a580fc4b5</a> ("net: lan966x: Fix return type of lan966x_port_xmit")<br/>
 <a href="https://git.kernel.org/linus/820dc0523e05c12810bb6bf4e56ce26e4c1948a2">820dc0523e05</a> ("net: netfilter: move bpf_ct_set_nat_info kfunc in nf_nat_bpf.c")<br/>
+<a href="https://git.kernel.org/linus/0f1fe9d6168306cd003d26dfdbb3bf3e79643e78">0f1fe9d61683</a> ("Revert "kbuild: Check if linker supports the -X option"")<br/>
+<a href="https://git.kernel.org/linus/0b33a33bd15d5bab73b87152b220a8d0153a4587">0b33a33bd15d</a> ("drm/msm: Fix return type of mdp4_lvds_connector_mode_valid")<br/>
+<a href="https://git.kernel.org/linus/88b61e3bff93f99712718db785b4aa0c1165f35c">88b61e3bff93</a> ("Makefile.compiler: replace cc-ifversion with compiler-specific macros")<br/>
 <a href="https://git.kernel.org/linus/fb2d14add4f813c73bd9d28b750315ccb3f5f0ea">fb2d14add4f8</a> ("Drivers: hv: vmbus: Split memcpy of flex-array")<br/>
+<a href="https://git.kernel.org/linus/37dcc673d065d9823576cd9f2484a72531e1cba6">37dcc673d065</a> ("frontswap: don't call ->init if no ops are registered")<br/>
 <a href="https://git.kernel.org/linus/3c516f89e17e56b4738f05588e51267e295b5e63">3c516f89e17e</a> ("x86: Add support for CONFIG_CFI_CLANG")<br/>
 <a href="https://git.kernel.org/linus/a4b7a12c5594fe5e6ab2a5aa514a9ae3c0b85573">a4b7a12c5594</a> ("x86/purgatory: Disable CFI")<br/>
 <a href="https://git.kernel.org/linus/ccace936eec7b805e1ab9268a6d163a00047b3a9">ccace936eec7</a> ("x86: Add types to indirectly called assembly functions")<br/>
@@ -351,18 +265,52 @@ It is important to keep in mind that sending patches is only part of the develop
 <a href="https://git.kernel.org/linus/9fca7115827b2e5f48d84e50bceb4edfd4cb6375">9fca7115827b</a> ("cfi: Remove CONFIG_CFI_CLANG_SHADOW")<br/>
 <a href="https://git.kernel.org/linus/d0f9562ee43a135b941715d9e5e607de88898aca">d0f9562ee43a</a> ("scripts/kallsyms: Ignore __kcfi_typeid_")<br/>
 <a href="https://git.kernel.org/linus/f143ff397a3f991e8b48542f77aad900845f436e">f143ff397a3f</a> ("treewide: Filter out CC_FLAGS_CFI")<br/>
+<a href="https://git.kernel.org/linus/9512d5f8e34fb7c92be6179dc48ba5f0b9b922ac">9512d5f8e34f</a> ("staging: r8188eu: Fix return type of rtw_xmit_entry")<br/>
+<a href="https://git.kernel.org/linus/b77599043f00fce9253d0f22522c5d5b521555ce">b77599043f00</a> ("staging: octeon: Fix return type of cvm_oct_xmit and cvm_oct_xmit_pow")<br/>
+<a href="https://git.kernel.org/linus/2851349ac351010a2649e0ff86a1e3d68fe5d683">2851349ac351</a> ("staging: rtl8192u: Fix return type of ieee80211_xmit")<br/>
+<a href="https://git.kernel.org/linus/32ef9e5054ec0321b9336058c58ec749e9c6b0fe">32ef9e5054ec</a> ("Makefile.debug: re-enable debug info for .S files")<br/>
+<a href="https://git.kernel.org/linus/61f2b7c7497ba96cdde5bbaeb9e07f4c48f41f97">61f2b7c7497b</a> ("Makefile.debug: set -g unconditional on CONFIG_DEBUG_INFO_SPLIT")<br/>
+<a href="https://git.kernel.org/linus/237fe72749425f2cd3132bf54fa6b98807c27938">237fe7274942</a> ("scripts/clang-tools: remove unused module")<br/>
 <a href="https://git.kernel.org/linus/0072dc1b53c39fb7c4cfc5c9e5d5a30622198613">0072dc1b53c3</a> ("arm64: avoid BUILD_BUG_ON() in alternative-macros")<br/>
+<a href="https://git.kernel.org/linus/8bb7c4f8c9276eb61f7f39cc107f67a0e81de610">8bb7c4f8c927</a> ("openvswitch: Change the return type for vport_ops.send function hook to int")<br/>
+<a href="https://git.kernel.org/linus/106c67ce46f3c82dd276e983668a91d6ed631173">106c67ce46f3</a> ("net: korina: Fix return type of korina_send_packet")<br/>
+<a href="https://git.kernel.org/linus/40662333dd7c64664247a6138bc33f3974e3a331">40662333dd7c</a> ("net: ethernet: litex: Fix return type of liteeth_start_xmit")<br/>
+<a href="https://git.kernel.org/linus/5972ca946098487c5155fe13654743f9010f5ed5">5972ca946098</a> ("net: ethernet: ti: davinci_emac: Fix return type of emac_dev_xmit")<br/>
+<a href="https://git.kernel.org/linus/0191580b000d50089a0b351f7cdbec4866e3d0d2">0191580b000d</a> ("net: davicom: Fix return type of dm9000_start_xmit")<br/>
+<a href="https://git.kernel.org/linus/21f0b7dabf9c358e75a539b5554c0375bf1abe0a">21f0b7dabf9c</a> ("drm/i915: Fix return type of mode_valid function hook")<br/>
+<a href="https://git.kernel.org/linus/06c1c49d0cd1d6cec5b78963109ba728e49e0063">06c1c49d0cd1</a> ("fortify: Adjust KUnit test for modular build")<br/>
+<a href="https://git.kernel.org/linus/b0b9408f132623dc88e78adb5282f74e4b64bb57">b0b9408f1326</a> ("drm/rockchip: Fix return type of cdn_dp_connector_mode_valid")<br/>
 <a href="https://git.kernel.org/linus/a66de5283e16602b74658289360505ceeb308c90">a66de5283e16</a> ("powerpc/pseries: Fix plpks crash on non-pseries")<br/>
+<a href="https://git.kernel.org/linus/7245fc5bb7a966852d5bd7779d1f5855530b461a">7245fc5bb7a9</a> ("powerpc/math-emu: Remove -w build flag and fix warnings")<br/>
+<a href="https://git.kernel.org/linus/b0839b281c427e844143dba3893e25c83cdd6c17">b0839b281c42</a> ("Makefile.extrawarn: re-enable -Wformat for clang; take 2")<br/>
+<a href="https://git.kernel.org/linus/4ffb4d25ef1251d57881da183d6bec7f2dfe1e32">4ffb4d25ef12</a> ("wifi: rtw88: fix uninitialized use of primary channel index")<br/>
+<a href="https://git.kernel.org/linus/ea522b806162ca947427f8305310d3c8a3d42d7a">ea522b806162</a> ("platform/x86/amd/pmf: Fix clang unused variable warning")<br/>
+<a href="https://git.kernel.org/linus/a0a12c3ed057af57552bf6c0aeaca6835693df04">a0a12c3ed057</a> ("asm goto: eradicate CC_HAS_ASM_GOTO")<br/>
+<a href="https://git.kernel.org/linus/c9a1dd673f28da9624776e75b78ae04125544852">c9a1dd673f28</a> ("rtc: zynqmp: initialize fract_tick")<br/>
+<a href="https://git.kernel.org/linus/b7bf23c0865faac61564425ddc96a4a79ebf19b0">b7bf23c0865f</a> ("ASoC: SOF: ipc3-topology: Fix clang -Wformat warning")<br/>
 <a href="https://git.kernel.org/linus/b5276c924497705ca927ad85a763c37f2de98349">b5276c924497</a> ("drivers: lkdtm: fix clang -Wformat warning")<br/>
 <a href="https://git.kernel.org/linus/b4909252da9be56fe1e0a23c2c1908c5630525fa">b4909252da9b</a> ("drivers: lkdtm: fix clang -Wformat warning")<br/>
+<a href="https://git.kernel.org/linus/b321823a03dc81a5b83b063e6e1904d612b53266">b321823a03dc</a> ("io_uring: fix io_poll_remove_all clang warnings")<br/>
+<a href="https://git.kernel.org/linus/f066b8f7d961b0f3ec08678a27f2f1a2f0148380">f066b8f7d961</a> ("drivers: iommu: fix clang -wformat warning")<br/>
+<a href="https://git.kernel.org/linus/1e744351bcb9c4cee81300de5a6097100d835386">1e744351bcb9</a> ("ASoC: Intel: avs: Use lookup table to create modules")<br/>
+<a href="https://git.kernel.org/linus/9950f11211331180269867aef848c7cf56861742">9950f1121133</a> ("can: pch_can: pch_can_error(): initialize errc before using it")<br/>
+<a href="https://git.kernel.org/linus/aa8c7cdbae58b695ed79a0129b6b8c887b25969f">aa8c7cdbae58</a> ("netfilter: xt_TPROXY: remove pr_debug invocations")<br/>
 <a href="https://git.kernel.org/linus/29589ca09a74cfc0c50ad002e298bf4b8e69e0bd">29589ca09a74</a> ("ARM: 9208/1: entry: add .ltorg directive to keep literals in range")<br/>
+<a href="https://git.kernel.org/linus/5b47d2364652979dc43df14f7af19346a001b770">5b47d2364652</a> ("net: rxrpc: fix clang -Wformat warning")<br/>
+<a href="https://git.kernel.org/linus/ffff4913c7e22cc2bd5570df73e0e154bf111215">ffff4913c7e2</a> ("eeprom: idt_89hpesx: fix clang -Wformat warnings")<br/>
 <a href="https://git.kernel.org/linus/bdd0d7e290e0e4c8f7545fff89770abbd22bd51a">bdd0d7e290e0</a> ("drm/amd/display: fix non-x86/PPC64 compilation")<br/>
+<a href="https://git.kernel.org/linus/2fd26970cf66bd52dc42843c46968040caa8c9a1">2fd26970cf66</a> ("Revert "kernfs: Change kernfs_notify_list to llist."")<br/>
 <a href="https://git.kernel.org/linus/51bae889fe111e418321ff0e6bb5f67e64cb9042">51bae889fe11</a> ("af_unix: Put pathname sockets in the global hash table.")<br/>
 <a href="https://git.kernel.org/linus/1e70212e031528918066a631c9fdccda93a1ffaa">1e70212e0315</a> ("hinic: Replace memcpy() with direct assignment")<br/>
+<a href="https://git.kernel.org/linus/291810be4227564403807e663f3ec8d3b3d6ba34">291810be4227</a> ("Documentation/llvm: Update Supported Arch table")<br/>
 <a href="https://git.kernel.org/linus/2c0ab32b73cfe39a609192f338464e948fc39117">2c0ab32b73cf</a> ("hinic: Replace memcpy() with direct assignment")<br/>
+<a href="https://git.kernel.org/linus/d30dfd490f7dc4cb6a7c11a647bd1ff7a22139e7">d30dfd490f7d</a> ("include/uapi/linux/swab.h: move explicit cast outside ternary")<br/>
 <a href="https://git.kernel.org/linus/c0c87382c1a6985cd12a49a62a893361e5fd1b8f">c0c87382c1a6</a> ("drm/amdgpu/display: fix build when CONFIG_DEBUG_FS is not set")<br/>
 <a href="https://git.kernel.org/linus/90f4b5499cdd94be3c1e856375ecd7d5f9c4cecc">90f4b5499cdd</a> ("rtw88: 8821c: fix access const table of channel parameters")<br/>
+<a href="https://git.kernel.org/linus/9be4cbd09da820a20d400670a45fc1571f6a13b8">9be4cbd09da8</a> ("driver core: Set default deferred_probe_timeout back to 0.")<br/>
+<a href="https://git.kernel.org/linus/5ee76c256e928455212ab759c51d198fedbe7523">5ee76c256e92</a> ("driver core: Fix wait_for_device_probe() & deferred_probe_timeout interaction")<br/>
 <a href="https://git.kernel.org/linus/e15db62bc5648ab459a570862f654e787c498faf">e15db62bc564</a> ("swiotlb: fix setting ->force_bounce")<br/>
+<a href="https://git.kernel.org/linus/01ece65132e2980ece4eca91105dfc9eed504881">01ece65132e2</a> ("drm/ssd130x: Only define a SPI device ID table when built as a module")<br/>
 <a href="https://git.kernel.org/linus/f6b66ca4f38b1169313383aec7fa0a8446205ebb">f6b66ca4f38b</a> ("kbuild: rebuild multi-object modules when objtool is updated")<br/>
 <a href="https://git.kernel.org/linus/ebd191b38c5ea177318543a08e544cf2f7df944d">ebd191b38c5e</a> ("kbuild: add cmd_and_savecmd macro")<br/>
 <a href="https://git.kernel.org/linus/c6031b1dbbbfec03891bf1baefa2e0803d705601">c6031b1dbbbf</a> ("kbuild: make *.mod rule robust against too long argument error")<br/>
@@ -386,22 +334,56 @@ It is important to keep in mind that sending patches is only part of the develop
 <a href="https://git.kernel.org/linus/e493f472752000968f5b30aac10391288cfbf5b1">e493f4727520</a> ("kbuild: generate a list of objects in vmlinux")<br/>
 <a href="https://git.kernel.org/linus/a44abaca0e196cfeef2374ed663b97daa1ad112a">a44abaca0e19</a> ("modpost: move *.mod.c generation to write_mod_c_files()")<br/>
 <a href="https://git.kernel.org/linus/7fedac9698b3a56571064eb3b23063f09c93eb94">7fedac9698b3</a> ("modpost: merge add_{intree_flag,retpoline,staging_flag} to add_header")<br/>
+<a href="https://git.kernel.org/linus/5eefe17c7ae41bac4d2d281669e8357a10f4d5a4">5eefe17c7ae4</a> ("libbpf: Clean up ringbuf size adjustment implementation")<br/>
+<a href="https://git.kernel.org/linus/0e900029655327bb5326ced02eff97667a079039">0e9000296553</a> ("ipc/sem: remove redundant assignments")<br/>
+<a href="https://git.kernel.org/linus/7374fa33dc2dd76b71999f8fd236e73b21161030">7374fa33dc2d</a> ("init/Kconfig: remove USELIB syscall by default")<br/>
 <a href="https://git.kernel.org/linus/9d79799193b728b62c9899d931b5009da1f89b67">9d79799193b7</a> ("fbcon: Fix delayed takeover locking")<br/>
+<a href="https://git.kernel.org/linus/e6f3b3c9c109ed57230996cf4a4c1b8ae7e36a81">e6f3b3c9c109</a> ("cfi: Use __builtin_function_start")<br/>
+<a href="https://git.kernel.org/linus/1754cea1763e2bdc6a2153220440fe9aa9e0f2c9">1754cea1763e</a> ("drm/amd/display: fix 64 bit divide in freesync code")<br/>
 <a href="https://git.kernel.org/linus/334865b2915c33080624e0d06f1c3e917036472c">334865b2915c</a> ("x86/extable: Prefer local labels in .set directives")<br/>
+<a href="https://git.kernel.org/linus/22ef7ee3eeb2a41e07f611754ab9a2663232fedf">22ef7ee3eeb2</a> ("PCI: hv: Remove unused hv_set_msi_entry_from_desc()")<br/>
+<a href="https://git.kernel.org/linus/9fbed27a7a1101c926718dfa9b49aff1d04477b5">9fbed27a7a11</a> ("kbuild: add --target to correctly cross-compile UAPI headers with Clang")<br/>
+<a href="https://git.kernel.org/linus/60210a3d86dc57ce4a76a366e7841dda746a33f7">60210a3d86dc</a> ("riscv module: remove (NOLOAD)")<br/>
+<a href="https://git.kernel.org/linus/faf79934e65aff90284725518a5ec3c2241c65ae">faf79934e65a</a> ("s390/alternatives: avoid using jgnop mnemonic")<br/>
+<a href="https://git.kernel.org/linus/b027471adaf955efde6153d67f391fe1604b7292">b027471adaf9</a> ("Revert "ubsan, kcsan: Don't combine sanitizer with kcov on clang"")<br/>
+<a href="https://git.kernel.org/linus/14e83077d55ff4b88fe39f5e98fb8230c2ccb4fb">14e83077d55f</a> ("include: drop pointless __compiler_offsetof indirection")<br/>
+<a href="https://git.kernel.org/linus/f9b3cd24578401e7a392974b3353277286e49cee">f9b3cd245784</a> ("Kconfig.debug: make DEBUG_INFO selectable from a choice")<br/>
+<a href="https://git.kernel.org/linus/ffea9fb319360b9ead8befac6bb2db2b54fd53e6">ffea9fb31936</a> ("sched/headers: ARM needs asm/paravirt_api_clock.h too")<br/>
+<a href="https://git.kernel.org/linus/c7500c1b53bfc083e8968cdce13a5a9d1ca9bf83">c7500c1b53bf</a> ("um: Allow builds with Clang")<br/>
+<a href="https://git.kernel.org/linus/a8ae15ead9c9d10671c3f76cb0749dec6e571ce7">a8ae15ead9c9</a> ("ASoC: atmel: mchp-pdmc: Fix `-Wpointer-bool-conversion` warning")<br/>
+<a href="https://git.kernel.org/linus/b847bd64ea9f484510e27065cb2bccc58d9b829b">b847bd64ea9f</a> ("MIPS: Only use current_stack_pointer on GCC")<br/>
+<a href="https://git.kernel.org/linus/1e24078113ae69c741cb1b03375a9f1490db7308">1e24078113ae</a> ("Kbuild: use -std=gnu11 for KBUILD_USERCFLAGS")<br/>
+<a href="https://git.kernel.org/linus/e8c07082a810fbb9db303a2b66b66b8d7e588b53">e8c07082a810</a> ("Kbuild: move to -std=gnu11")<br/>
+<a href="https://git.kernel.org/linus/4d94f910e79a349b00a4f8aab6f3ae87129d8c5a">4d94f910e79a</a> ("Kbuild: use -Wdeclaration-after-statement")<br/>
+<a href="https://git.kernel.org/linus/1344794a59db2bd44b4919d2d75300fd3b1c2cd7">1344794a59db</a> ("Kbuild: add -Wno-shift-negative-value where -Wextra is used")<br/>
 <a href="https://git.kernel.org/linus/6c7cb60bff7aec24b834343ff433125f469886a3">6c7cb60bff7a</a> ("ARM: fix Thumb2 regression with Spectre BHB")<br/>
+<a href="https://git.kernel.org/linus/6580c5c18fb3df2b11c5e0452372f815deeff895">6580c5c18fb3</a> ("um: clang: Strip out -mno-global-merge from USER_CFLAGS")<br/>
+<a href="https://git.kernel.org/linus/afcf5441b9ff22ac57244cd45ff102ebc2e32d1a">afcf5441b9ff</a> ("arm64: Add gcc Shadow Call Stack support")<br/>
+<a href="https://git.kernel.org/linus/d55957fb299b74829c438f77fe29896e3aed39fc">d55957fb299b</a> ("drm/amdkfd: bail out early if no get_atc_vmid_pasid_mapping_info")<br/>
+<a href="https://git.kernel.org/linus/330f4c53d3c2d8b11d86ec03a964b86dc81452f5">330f4c53d3c2</a> ("ARM: fix build error when BPF_SYSCALL is disabled")<br/>
 <a href="https://git.kernel.org/linus/4013e26670c590944abdab56c4fa797527b74325">4013e26670c5</a> ("arm64: module: remove (NOLOAD) from linker script")<br/>
 <a href="https://git.kernel.org/linus/925088781eede43cf6616a1197c31dee451b7948">925088781eed</a> ("KVM: x86: Fix pointer mistmatch warning when patching RET0 static calls")<br/>
+<a href="https://git.kernel.org/linus/d4c858643263cfde13f7d937eaff95c2ed87cdf1">d4c858643263</a> ("kallsyms: ignore all local labels prefixed by '.L'")<br/>
+<a href="https://git.kernel.org/linus/baf682144ecacae4b98597daa636ce7b2b3143f6">baf682144eca</a> ("drm/i915: fix build issue when using clang")<br/>
+<a href="https://git.kernel.org/linus/efa90c11f62e6b7252fb75efe2787056872a627c">efa90c11f62e</a> ("stack: Constrain and fix stack offset randomization with Clang builds")<br/>
+<a href="https://git.kernel.org/linus/8cb37a5974a48569aab8a1736d21399fddbdbdb2">8cb37a5974a4</a> ("stack: Introduce CONFIG_RANDOMIZE_KSTACK_OFFSET")<br/>
+<a href="https://git.kernel.org/linus/5790597d7113faabb1714d3d1efa268e36eb4811">5790597d7113</a> ("spi: Fix warning for Clang build and simplify code")<br/>
+<a href="https://git.kernel.org/linus/818ab43fc56ad978cbb7c0ffdc9a332fd2f23a23">818ab43fc56a</a> ("fortify: Update compile-time tests for Clang 14")<br/>
 <a href="https://git.kernel.org/linus/cc188a73addc8188d73ad11901b697acdc7fd0b0">cc188a73addc</a> ("drm/amd/pm: fix enabled features retrieving on Renoir and Cyan Skillfish")<br/>
 <a href="https://git.kernel.org/linus/a69cb445f7d129abf7c50d48c8a8eca7c8d5df15">a69cb445f7d1</a> ("crypto: arm/xor - make vectorized C code Clang-friendly")<br/>
 <a href="https://git.kernel.org/linus/297565aa22cfa80ab0f88c3569693aea0b6afb6d">297565aa22cf</a> ("lib/xor: make xor prototypes more friendly to compiler vectorization")<br/>
 <a href="https://git.kernel.org/linus/6bf625a4140f24b490766043b307f8252519578b">6bf625a4140f</a> ("Drivers: hv: vmbus: Rework use of DMA_BIT_MASK(64)")<br/>
 <a href="https://git.kernel.org/linus/d2a02e3c8bb6b347818518edff5a4b40ff52d6d8">d2a02e3c8bb6</a> ("lib/crypto: blake2s: avoid indirect calls to compression function for Clang CFI")<br/>
 <a href="https://git.kernel.org/linus/b7892f7d5cb2b8187c603dd8ea3a7c44059ccfc2">b7892f7d5cb2</a> ("tools: Ignore errors from `which' when searching a GCC toolchain")<br/>
+<a href="https://git.kernel.org/linus/b470947c3672f7eb7c4c271d510383d896831cc2">b470947c3672</a> ("usb: dwc3: xilinx: fix uninitialized return value")<br/>
+<a href="https://git.kernel.org/linus/25d2e41cf59bd6ccd23adc2965a157053bc3ed5c">25d2e41cf59b</a> ("pinctrl: thunderbay: rework loops looking for groups names")<br/>
+<a href="https://git.kernel.org/linus/bece04b5b41dd7730dd06aec0d6b15c53d1fbb5a">bece04b5b41d</a> ("kcov: fix generic Kconfig dependencies if ARCH_WANTS_NO_INSTR")<br/>
 <a href="https://git.kernel.org/linus/35140d399db2b67153fc53b51a97ddb8ba3b5956">35140d399db2</a> ("script/sorttable: Fix some initialization problems")<br/>
 <a href="https://git.kernel.org/linus/2056e2989bf47ad7274ecc5e9dda2add53c112f9">2056e2989bf4</a> ("x86/sgx: Fix NULL pointer dereference on non-SGX systems")<br/>
+<a href="https://git.kernel.org/linus/5d9224fb076e9a2023e0b06d6a164d644612c0c0">5d9224fb076e</a> ("scsi: hisi_sas: Remove unused variable and check in hisi_sas_send_ata_reset_each_phy()")<br/>
 <a href="https://git.kernel.org/linus/5fe41793bc78d9bb47fea37d1a16984ad6cf294b">5fe41793bc78</a> ("ARM: 9176/1: avoid literal references in inline assembly")<br/>
 </code></p>
-</details></br>
+</details><br/>
 
 As a direct result of this, I appeared in the top testers in the [5.19 development cycle](https://lwn.net/Articles/902854/) and [6.1 development cycle](https://lwn.net/Articles/915435/).
 
@@ -409,8 +391,16 @@ As a direct result of this, I appeared in the top testers in the [5.19 developme
 
 ## LLVM
 
-I am far from a large LLVM contributor but I do have occasional patches there as part of this work. This year, I had 4 patches to LLVM, which can be viewed on [GitHub](https://github.com/llvm/llvm-project/commits/main?author=nathanchance). They are just reverts of patches that caused issue for us, which I was a little bit more aggressive about this year due to our use of LLVM ToT in continuous integration.
+I am far from a large LLVM contributor but I do have occasional patches there as part of this work. This year, I had 4 patches to LLVM, which were all just reverts of patches that caused issue for us, which I was a little bit more aggressive about this year due to our use of LLVM ToT in continuous integration.
 
+<details>
+<summary>LLVM contributions in 2022 (<a href="https://github.com/llvm/llvm-project/commits/main?author=nathanchance">GitHub</a>)</summary>
+<p><code><a href="https://github.com/llvm/llvm-project/commit/74bace2dfe57d9cf569addf94af4e01a990d2374">74bace2dfe57</a> ("Revert "[AArch64] Improve codegen for shifted mask op"")<br/>
+<a href="https://github.com/llvm/llvm-project/commit/23c50432fb25775fe0eb958bc8c2a099b0a0c286">23c50432fb25</a> ("Revert "[AArch64]SME2 Outer Product and Accumulate instructions"")<br/>
+<a href="https://github.com/llvm/llvm-project/commit/4e0008dcbe9fce99b9727e8bbeb129efc7bf2d80">4e0008dcbe9f</a> ("Revert "[InstCombine] try to narrow shifted bswap-of-zext"")<br/>
+<a href="https://github.com/llvm/llvm-project/commit/22eb1dae3fb20ca8ada865de1d95baab0e08a060">22eb1dae3fb2</a> ("Revert "[AArch64] Adds SUBS and ADDS instructions to the MIPeepholeOpt."")<br/>
+</code></p>
+</details></br>
 
 
 ## Tooling
@@ -1010,7 +1000,8 @@ Like previously, I have included the `git log` output with direct links to commi
 
 <details>
 <summary>TuxMake</summary>
-<p><code><a href="https://gitlab.com/Linaro/tuxmake/-/commit/969446df28311c9d15f227f2fd0a12ab1463457f">969446d</a> ("docker: clang-android: Update to r458507 (15.0.1)")<br/>
+<p><code><a href="https://gitlab.com/Linaro/tuxmake/-/commit/0c76477f48a30c55750dd183baaee0fa1ab05e75">0c76477</a> ("docker: clang-android: Update to r475365b (16.0.2)")<br/>
+<a href="https://gitlab.com/Linaro/tuxmake/-/commit/969446df28311c9d15f227f2fd0a12ab1463457f">969446d</a> ("docker: clang-android: Update to r458507 (15.0.1)")<br/>
 <a href="https://gitlab.com/Linaro/tuxmake/-/commit/6a573a6b74b0c831a32dda16ca5b0fa076ae207d">6a573a6</a> (".gitlab-ci.yml: Wire up Arch Linux integration tests")<br/>
 <a href="https://gitlab.com/Linaro/tuxmake/-/commit/d21087b041f0878578fc331f7da470f412f0e5dc">d21087b</a> ("test/integration: Look for Arch Linux's shunit2")<br/>
 <a href="https://gitlab.com/Linaro/tuxmake/-/commit/f9b1fa9371bbfe5fa2af79d0ea945033a3c3bc9c">f9b1fa9</a> ("ci: Wire up Arch Linux package building")<br/>
