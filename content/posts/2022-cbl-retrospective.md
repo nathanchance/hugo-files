@@ -1032,7 +1032,7 @@ There are always things that require time but do not always show tangible result
 
 ## Special thanks
 
-Special thanks to [Google](https://www.google.com/) and [the Linux Foundation](https://linuxfoundation.org/) for [sponsoring my work](https://linuxfoundation.org/en/press-release/google-funds-linux-kernel-developers-to-focus-exclusively-on-security/). I am in a very fortunate position thanks to the work of many great and suppportive folks at those organizations and I look forward to continuing to contribute under this umbrella for 2023!
+Special thanks to [Google](https://www.google.com/) and [the Linux Foundation](https://www.linuxfoundation.org) for [sponsoring my work](https://www.linuxfoundation.org/press/press-release/google-funds-linux-kernel-developers-to-focus-exclusively-on-security). I am in a very fortunate position thanks to the work of many great and suppportive folks at those organizations and I look forward to continuing to contribute under this umbrella for 2023!
 
 To view individual monthly reports, click on one of the links below:
 
