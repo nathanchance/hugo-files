@@ -16,6 +16,7 @@ Occasionally, I will forget to link something from the mailing list in this post
 
 * Build errors: These are patches to fix various build errors that I found through testing different configurations with LLVM or were exposed by our continuous integration setup. The kernel needs to build in order to be run :)
 
+  * `ALSA: hwdep: Move put_user() call out of scoped_guard() in snd_hwdep_control_ioctl()` ([`v1`](https://lore.kernel.org/20240301-fix-snd-hwdep-guard-v1-1-6aab033f3f83@kernel.org/))
   * `` ([`v1`]())
 
 * Downstream fixes: These are fixes and improvements that occur in a downstream Linux tree, such as Android or ChromeOS, which our continuous integration regularly tests.
