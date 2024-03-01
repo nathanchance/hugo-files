@@ -65,6 +65,7 @@ The unfortunate thing about working at the intersection of two projects is we wi
 
 These are changes to various tools that we use, such as our continuous integration setup, booting utilities, toolchain building scripts, or other closely related projects such as [AOSP's distribution of LLVM](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/) and [TuxMake](https://tuxmake.org).
 
+* [`generator: workflow: Use setup-python action in check cache stage`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/720)
 * [``]()
 
 
