@@ -35,6 +35,7 @@ Occasionally, I will forget to link something from the mailing list in this post
 
   * `PCI: imx6: Fix clang -Wimplicit-fallthrough in imx6_pcie_probe()` ([`v1`](https://lore.kernel.org/20240301-pci-imx6-fix-clang-implicit-fallthrough-v1-1-db78c7cbb384@kernel.org/))
   * `kbuild: Move -Wenum-{compare-conditional,enum-conversion} into W=1` ([`v1`](https://lore.kernel.org/20240305-disable-extra-clang-enum-warnings-v1-1-6a93ef3d35ff@kernel.org/), [`v2`](https://lore.kernel.org/20240305-disable-extra-clang-enum-warnings-v2-1-ba529ec15f95@kernel.org/))
+  * `media: mxl5xx: Move xpt structures off stack` ([`v2`](https://lore.kernel.org/20240305-dvb-mxl5xx-move-structs-off-stack-v2-1-6903844aba3c@kernel.org/))
   * `` ([`v1`]())
 
 
