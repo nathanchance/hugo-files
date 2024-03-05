@@ -72,6 +72,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`generator: workflow: Use setup-python action in check cache stage`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/720)
 * [`Fix Python dependency installation in clang-nightly containers`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/721)
 * [`Switch s390 builds on -next with LLVM 18 over to LLVM=1`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/722)
+* [`Update patches (March 5, 2024)`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/723)
 * [``]()
 
 
