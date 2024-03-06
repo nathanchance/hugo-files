@@ -74,6 +74,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`Fix Python dependency installation in clang-nightly containers`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/721)
 * [`Switch s390 builds on -next with LLVM 18 over to LLVM=1`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/722)
 * [`Update patches (March 5, 2024)`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/723)
+* [`Fix clang-android builds`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/725)
 * [``]()
 
 
