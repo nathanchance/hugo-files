@@ -85,6 +85,8 @@ These are changes to various tools that we use, such as our continuous integrati
 
 * Every day that there is a new [linux-next](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/) release, I rebase and build a few different kernel trees then boot and runtime test them on several different machines, including a Raspberry Pi 4, a Raspberry Pi 3, a SolidRun Honeycomb LX2, an Ampere Altra Developer Platform, an Intel-based desktop, an AMD-based desktop, and an Intel-based laptop. This is not always visible because I do not report anything unless there is something broken but it can take up to a few hours each day, depending on the amount of churn and issues uncovered.
 
+* I ran the [March 6th](https://github.com/ClangBuiltLinux/meeting-notes/pull/56) ClangBuiltLinux meeting.
+
 
 
 ## Special thanks
