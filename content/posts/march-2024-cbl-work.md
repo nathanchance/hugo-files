@@ -52,6 +52,7 @@ For the next sections, I link directly to my first response in the thread when p
 
 Reviewing patches that are submitted is incredibly important, as it helps ensure good code quality due to catching mistakes before the patches get accepted and it can help get patches accepted faster, as some maintainers will blindly pick up patches that have been reviewed by someone that they trust.
 
+* [`Re: [PATCH] kbuild: remove GCC's default -Wpacked-bitfield-compat flag`](https://lore.kernel.org/20240306164950.GB3659677@dev-arch.thelio-3990X/)
 * [``]()
 
 
