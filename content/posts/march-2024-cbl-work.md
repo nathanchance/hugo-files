@@ -87,6 +87,10 @@ These are changes to various tools that we use, such as our continuous integrati
 
 * I ran the [March 6th](https://github.com/ClangBuiltLinux/meeting-notes/pull/56) ClangBuiltLinux meeting.
 
+* I continue to upload prebuilt, fast versions of LLVM for kernel developers and our continuous integration to use.
+
+  * [18.1.0](https://lore.kernel.org/20240307000841.GA3806611@dev-arch.thelio-3990X/)
+
 
 
 ## Special thanks
