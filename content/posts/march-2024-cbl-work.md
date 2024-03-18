@@ -54,6 +54,12 @@ Reviewing patches that are submitted is incredibly important, as it helps ensure
 
 * [`Re: [PATCH] kbuild: remove GCC's default -Wpacked-bitfield-compat flag`](https://lore.kernel.org/20240306164950.GB3659677@dev-arch.thelio-3990X/)
 * [`Re: [PATCH] printk: fix _entry_ptr build warning`](https://lore.kernel.org/20240306194020.GA3711543@dev-arch.thelio-3990X/)
+* [`Re: [PATCH] ssb: use "break" on default case to prevent warning`](https://lore.kernel.org/20240313153236.GA2931742@dev-arch.thelio-3990X/)
+* [`Re: [PATCH] tracing: Use strcmp() in __assign_str() WARN_ON() check`](https://lore.kernel.org/20240313165903.GA3021536@dev-arch.thelio-3990X/)
+* [`Re: [PATCH 5.15 45/76] modpost: Add '.ltext' and '.ltext.*' to TEXT_SECTIONS`](https://lore.kernel.org/20240313171229.GA3064248@dev-arch.thelio-3990X/)
+* [`Re: [PATCH] memtest: use {READ,WRITE}_ONCE in memory scanning`](https://lore.kernel.org/20240313172141.GB3064248@dev-arch.thelio-3990X/)
+* [`Re: [PATCH-next] arm: fix clang build warning in include/asm/memory.h`](https://lore.kernel.org/all/20240315004352.GA768888@dev-arch.thelio-3990X/)
+* [`Re: [PATCH V2] kbuild: rpm-pkg: add dtb files in kernel rpm`](https://lore.kernel.org/20240315190021.GA721491@dev-arch.thelio-3990X/)
 * [``]()
 
 
@@ -77,6 +83,11 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`Update patches (March 5, 2024)`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/723)
 * [`patches: Drop 6.1 AMDGPU patch from upstream`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/724)
 * [`Fix clang-android builds`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/725)
+* [`tc_build: tools: Update location of LLVM_VERSION_MAJOR`](https://github.com/ClangBuiltLinux/tc-build/pull/263)
+* [`Switch s390 builds on mainline with LLVM 18+ over to LLVM=1`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/727)
+* [`Update stable anchor to 6.8`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/728)
+* [`Update patches (March 15, 2024)`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/730)
+* [`patches: mainline: Drop powerpc '-mhard-float' patch`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/731)
 * [``]()
 
 
@@ -90,6 +101,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * I continue to upload prebuilt, fast versions of LLVM for kernel developers and our continuous integration to use.
 
   * [18.1.0](https://lore.kernel.org/20240307000841.GA3806611@dev-arch.thelio-3990X/)
+  * [18.1.1](https://lore.kernel.org/20240315142607.GA73955@dev-arch.thelio-3990X/)
 
 
 
