@@ -37,6 +37,7 @@ Occasionally, I will forget to link something from the mailing list in this post
   * `kbuild: Move -Wenum-{compare-conditional,enum-conversion} into W=1` ([`v1`](https://lore.kernel.org/20240305-disable-extra-clang-enum-warnings-v1-1-6a93ef3d35ff@kernel.org/), [`v2`](https://lore.kernel.org/20240305-disable-extra-clang-enum-warnings-v2-1-ba529ec15f95@kernel.org/))
   * `media: mxl5xx: Move xpt structures off stack` ([`v2`](https://lore.kernel.org/20240305-dvb-mxl5xx-move-structs-off-stack-v2-1-6903844aba3c@kernel.org/))
   * `clk: qcom: Fix two driver Kconfig dependencies` ([`v1`](https://lore.kernel.org/20240318-fix-some-qcom-kconfig-deps-v1-0-ea0773e3df5a@kernel.org/))
+  * `tracing: Fully silence instance of -Wstring-compare` ([`v1`](https://lore.kernel.org/20240319-tracing-fully-silence-wstring-compare-v1-0-81adb44403f5@kernel.org/))
   * `` ([`v1`]())
 
 
