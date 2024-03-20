@@ -63,6 +63,7 @@ Reviewing patches that are submitted is incredibly important, as it helps ensure
 * [`Re: [PATCH] memtest: use {READ,WRITE}_ONCE in memory scanning`](https://lore.kernel.org/20240313172141.GB3064248@dev-arch.thelio-3990X/)
 * [`Re: [PATCH-next] arm: fix clang build warning in include/asm/memory.h`](https://lore.kernel.org/all/20240315004352.GA768888@dev-arch.thelio-3990X/)
 * [`Re: [PATCH V2] kbuild: rpm-pkg: add dtb files in kernel rpm`](https://lore.kernel.org/20240315190021.GA721491@dev-arch.thelio-3990X/)
+* [`Re: [tip: x86/percpu] x86/percpu: Convert this_percpu_xchg_op() from asm() to C code, to generate better code`](https://lore.kernel.org/20240320173758.GA3017166@dev-arch.thelio-3990X/)
 * [``]()
 
 
