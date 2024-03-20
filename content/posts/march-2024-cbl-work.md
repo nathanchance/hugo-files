@@ -107,6 +107,7 @@ These are changes to various tools that we use, such as our continuous integrati
 
   * [18.1.0](https://lore.kernel.org/20240307000841.GA3806611@dev-arch.thelio-3990X/)
   * [18.1.1](https://lore.kernel.org/20240315142607.GA73955@dev-arch.thelio-3990X/)
+  * [18.1.2](https://lore.kernel.org/20240320155007.GA12384@dev-arch.thelio-3990X/)
 
 
 
