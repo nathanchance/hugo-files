@@ -74,6 +74,7 @@ The unfortunate thing about working at the intersection of two projects is we wi
 
 * [`Allow using Hexagon with kernel.org LLVM`](https://gitlab.com/Linaro/tuxmake/-/issues/216)
 * [`[MachineFrameInfo] Refactoring with computeMaxcallFrameSize() (NFC)`](https://github.com/llvm/llvm-project/pull/78001)
+* [`Turn 'counted_by' into a type attribute and parse it into 'CountAttributedType'`](https://github.com/llvm/llvm-project/pull/78000#issuecomment-2010269493)
 * [``]()
 
 
