@@ -97,6 +97,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`Update patches (March 15, 2024)`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/730)
 * [`patches: mainline: Drop powerpc '-mhard-float' patch`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/731)
 * [`Disable MIPS builds that use GNU ld`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/734)
+* [`Add patches to fix performing PGO with current LLVM main`](https://github.com/ClangBuiltLinux/tc-build/pull/264)
 * [``]()
 
 
