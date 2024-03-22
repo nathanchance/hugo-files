@@ -98,6 +98,8 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`patches: mainline: Drop powerpc '-mhard-float' patch`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/731)
 * [`Disable MIPS builds that use GNU ld`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/734)
 * [`Add patches to fix performing PGO with current LLVM main`](https://github.com/ClangBuiltLinux/tc-build/pull/264)
+* [`Update korg-clang-18 to 18.1.2`](https://gitlab.com/Linaro/tuxmake/-/merge_requests/376)
+* [`patches: mainline: Drop -Wenum-enum-conversion patch`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/735)
 * [``]()
 
 
