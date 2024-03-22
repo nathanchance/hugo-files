@@ -100,6 +100,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`Add patches to fix performing PGO with current LLVM main`](https://github.com/ClangBuiltLinux/tc-build/pull/264)
 * [`Update korg-clang-18 to 18.1.2`](https://gitlab.com/Linaro/tuxmake/-/merge_requests/376)
 * [`patches: mainline: Drop -Wenum-enum-conversion patch`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/735)
+* [`Enable RISC-V LTO builds on mainline`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/736)
 * [``]()
 
 
