@@ -104,6 +104,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`Update korg-clang-18 to 18.1.2`](https://gitlab.com/Linaro/tuxmake/-/merge_requests/376)
 * [`patches: mainline: Drop -Wenum-enum-conversion patch`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/735)
 * [`Enable RISC-V LTO builds on mainline`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/736)
+* [`Update patches (March 26, 2024)`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/737)
 * [``]()
 
 
