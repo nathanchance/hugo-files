@@ -22,6 +22,7 @@ Occasionally, I will forget to link something from the mailing list in this post
 
 * Downstream fixes: These are fixes and improvements that occur in a downstream Linux tree, such as Android or ChromeOS, which our continuous integration regularly tests.
 
+  * [`ANDROID: usb: gadget: f_midi: Add missing stub for android_clear_midi_device_info()`](https://android-review.googlesource.com/q/I6413197f69599241862ea1607b7cd4fcb384591a)
   * `` ([`v1`]())
 
 * Miscellaneous fixes and improvements: These are fixes and improvements that don't fit into a particular category but are important to ClangBuiltLinux.
@@ -66,6 +67,7 @@ Reviewing patches that are submitted is incredibly important, as it helps ensure
 * [`Re: [tip: x86/percpu] x86/percpu: Convert this_percpu_xchg_op() from asm() to C code, to generate better code`](https://lore.kernel.org/20240320173758.GA3017166@dev-arch.thelio-3990X/)
 * [`Re: [PATCH] scripts/package: buildtar: Output as vmlinuz for riscv`](https://lore.kernel.org/20240321154320.GA616931@dev-arch.thelio-3990X/)
 * [`Split -Wcast-function-type into a separate group`](https://github.com/llvm/llvm-project/pull/86131#issuecomment-2012821677)
+* [`Re: [PATCH 5/9] surface3_power: avoid format string truncation warning`](https://lore.kernel.org/20240326230511.GA2796782@dev-arch.thelio-3990X/)
 * [``]()
 
 
@@ -77,6 +79,7 @@ The unfortunate thing about working at the intersection of two projects is we wi
 * [`Allow using Hexagon with kernel.org LLVM`](https://gitlab.com/Linaro/tuxmake/-/issues/216)
 * [`[MachineFrameInfo] Refactoring with computeMaxcallFrameSize() (NFC)`](https://github.com/llvm/llvm-project/pull/78001)
 * [`Turn 'counted_by' into a type attribute and parse it into 'CountAttributedType'`](https://github.com/llvm/llvm-project/pull/78000#issuecomment-2010269493)
+* [`Re: [RESEND v3 2/2] drm: Add CONFIG_DRM_WERROR`](https://lore.kernel.org/20240326225650.GA2784736@dev-arch.thelio-3990X/)
 * [``]()
 
 
