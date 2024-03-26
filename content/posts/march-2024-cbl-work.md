@@ -68,6 +68,8 @@ Reviewing patches that are submitted is incredibly important, as it helps ensure
 * [`Re: [PATCH] scripts/package: buildtar: Output as vmlinuz for riscv`](https://lore.kernel.org/20240321154320.GA616931@dev-arch.thelio-3990X/)
 * [`Split -Wcast-function-type into a separate group`](https://github.com/llvm/llvm-project/pull/86131#issuecomment-2012821677)
 * [`Re: [PATCH 5/9] surface3_power: avoid format string truncation warning`](https://lore.kernel.org/20240326230511.GA2796782@dev-arch.thelio-3990X/)
+* [`Re: [PATCH] ARM: vfp: use asm volatile for FP control register accesses`](https://lore.kernel.org/20240326235529.GA2025585@dev-arch.thelio-3990X/)
+* [`Re: [PATCH v2] arm: fix clang build warning in include/asm/memory.h`](https://lore.kernel.org/20240326235548.GB2025585@dev-arch.thelio-3990X/)
 * [``]()
 
 
