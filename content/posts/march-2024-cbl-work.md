@@ -27,6 +27,7 @@ Occasionally, I will forget to link something from the mailing list in this post
 
 * Miscellaneous fixes and improvements: These are fixes and improvements that don't fit into a particular category but are important to ClangBuiltLinux.
 
+  * `Documentation/llvm: Note s390 LLVM=1 support with LLVM 18.1.0 and newer` ([`v1`](https://lore.kernel.org/20240327-llvm-docs-s390-llvm-1-v1-1-56ad95d2bc27@kernel.org/))
   * `` ([`v1`]())
 
 * Stable backports and fixes: It is important to make sure that the stable trees are as free from issues as possible, as those are the trees that devices and users use; for example, Android and Chrome OS regularly merge from stable, so if there is a problem that will impact those trees that we fixed in mainline, it should be backported.
