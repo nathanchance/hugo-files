@@ -41,6 +41,7 @@ Occasionally, I will forget to link something from the mailing list in this post
   * `media: mxl5xx: Move xpt structures off stack` ([`v2`](https://lore.kernel.org/20240305-dvb-mxl5xx-move-structs-off-stack-v2-1-6903844aba3c@kernel.org/))
   * `clk: qcom: Fix two driver Kconfig dependencies` ([`v1`](https://lore.kernel.org/20240318-fix-some-qcom-kconfig-deps-v1-0-ea0773e3df5a@kernel.org/))
   * `tracing: Fully silence instance of -Wstring-compare` ([`v1`](https://lore.kernel.org/20240319-tracing-fully-silence-wstring-compare-v1-0-81adb44403f5@kernel.org/))
+  * `usb: typec: ptn36502: Only select DRM_AUX_BRIDGE with OF` ([`v1`](https://lore.kernel.org/20240328-fix-ptn36502-drm_aux_bridge-select-v1-1-85552117e26e@kernel.org/))
   * `` ([`v1`]())
 
 
