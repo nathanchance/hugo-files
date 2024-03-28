@@ -42,6 +42,7 @@ Occasionally, I will forget to link something from the mailing list in this post
   * `clk: qcom: Fix two driver Kconfig dependencies` ([`v1`](https://lore.kernel.org/20240318-fix-some-qcom-kconfig-deps-v1-0-ea0773e3df5a@kernel.org/))
   * `tracing: Fully silence instance of -Wstring-compare` ([`v1`](https://lore.kernel.org/20240319-tracing-fully-silence-wstring-compare-v1-0-81adb44403f5@kernel.org/))
   * `usb: typec: ptn36502: Only select DRM_AUX_BRIDGE with OF` ([`v1`](https://lore.kernel.org/20240328-fix-ptn36502-drm_aux_bridge-select-v1-1-85552117e26e@kernel.org/))
+  * `drm/panthor: Fix clang -Wunused-but-set-variable in tick_ctx_apply()` ([`v1`](https://lore.kernel.org/20240328-panthor-drop-csg_mod_mask-v1-1-5a80be3df581@kernel.org/))
   * `` ([`v1`]())
 
 
