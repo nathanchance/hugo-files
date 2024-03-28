@@ -83,6 +83,8 @@ The unfortunate thing about working at the intersection of two projects is we wi
 * [`[MachineFrameInfo] Refactoring with computeMaxcallFrameSize() (NFC)`](https://github.com/llvm/llvm-project/pull/78001)
 * [`Turn 'counted_by' into a type attribute and parse it into 'CountAttributedType'`](https://github.com/llvm/llvm-project/pull/78000#issuecomment-2010269493)
 * [`Re: [RESEND v3 2/2] drm: Add CONFIG_DRM_WERROR`](https://lore.kernel.org/20240326225650.GA2784736@dev-arch.thelio-3990X/)
+* [`Re: [PATCH 3/3] mm: move follow_phys to arch/x86/mm/pat/memtype.c`](https://lore.kernel.org/20240328152558.GA2652500@dev-arch.thelio-3990X/)
+* [`Re: [PATCH v6 10/14] drm/panthor: Add the scheduler logical block`](https://lore.kernel.org/20240328153809.GA2673768@dev-arch.thelio-3990X/)
 * [``]()
 
 
