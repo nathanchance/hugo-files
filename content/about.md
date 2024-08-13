@@ -5,7 +5,7 @@ date: 2022-04-29T10:15:00-07:00
 
 ![](/profile.jpg)
 
-I am a 28 year old Linux kernel and LLVM hacker, currently employed as an independent contractor through [The Linux Foundation](https://www.linuxfoundation.org) to maintain [ClangBuiltLinux](https://clangbuiltlinux.github.io/). I am interested in performance analysis, compilers, security, and operating systems. I completed my Bachelor of Science in Information Technology at [Grand Canyon University](https://gcu.edu/) in 2022.
+I am a Linux kernel and LLVM hacker, currently employed as an independent contractor through [The Linux Foundation](https://www.linuxfoundation.org) to maintain [ClangBuiltLinux](https://clangbuiltlinux.github.io/). I am interested in performance analysis, compilers, security, and operating systems. I completed my Bachelor of Science in Information Technology at [Grand Canyon University](https://gcu.edu/) in 2022.
 
 Below are links to some of my open source contributions. If you have any questions about them, feel free to reach out to me with the links on the home page.
 
