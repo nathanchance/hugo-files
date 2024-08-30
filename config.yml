@@ -48,6 +48,7 @@ params:
   comments: true
   defaultTheme: auto
   env: production
+  social: true
 
   editPost:
     URL: "https://github.com/nathanchance/hugo-files/blob/main/content"
