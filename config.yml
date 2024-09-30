@@ -1,7 +1,6 @@
 baseURL: "https://nathanchance.dev/"
 enableRobotsTXT: true
 pygmentsUseClasses: true
-paginate: 10
 theme: PaperMod
 title: "Nathan Chancellor"
 
