@@ -77,7 +77,7 @@ params:
     - name: linkedin
       url: "https://linkedin.com/in/nathanchancellor"
     - name: mastodon
-      url: "https://fosstodon.org/@nathanchance"
+      url: "https://hachyderm.io/@nathanchance"
     - name: telegram
       url: "https://t.me/nathanchance"
     - name: twitch
