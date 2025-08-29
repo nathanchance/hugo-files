@@ -60,6 +60,7 @@ params:
       I am a Linux kernel developer focused on improving compatibility with LLVM and clang as part of [ClangBuiltLinux](https://clangbuiltlinux.github.io/). I mostly blog about my work and tips and tricks that I discover.
 
   socialIcons:
+    # personal / site
     - name: rss
       url: "/index.xml"
     - name: email
@@ -68,24 +69,31 @@ params:
       url: "/nc_resume.pdf"
     - name: other
       url: "/99739260CB6CB716.asc"
-    - name: github
-      url: "https://github.com/nathanchance"
-    - name: gitlab
-      url: "https://gitlab.com/nathanchance"
-    - name: instagram
-      url: "https://instagram.com/nchancellor"
-    - name: linkedin
-      url: "https://linkedin.com/in/nathanchancellor"
+    # social
     - name: mastodon
       url: "https://hachyderm.io/@nathanchance"
+    - name: pixelfed
+      url: "https://pixelfed.social/@nathanchance"
+    - name: bluesky
+      url: "https://bsky.app/profile/nathanchance.bsky.social"
+    - name: linkedin
+      url: "https://linkedin.com/in/nathanchancellor"
+    # git
+    - name: github
+      url: "https://github.com/nathanchance"
+    - name: forgejo
+      url: "https://codeberg.org/nathanchance"
+    - name: gitlab
+      url: "https://gitlab.com/nathanchance"
+    # chat
     - name: telegram
       url: "https://t.me/nathanchance"
-    - name: twitch
-      url: "https://twitch.tv/nathanchance"
-    - name: twitter
-      url: "https://twitter.com/nathanchance"
+    # forums
     - name: xda
       url: "https://forum.xda-developers.com/m/nathanchance.6842057/"
+    # video
+    - name: twitch
+      url: "https://twitch.tv/nathanchance"
     - name: youtube
       url: "https://www.youtube.com/user/NateChs"
 
