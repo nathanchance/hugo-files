@@ -63,6 +63,8 @@ Reviewing patches that are submitted is incredibly important, as it helps ensure
 * [`Re: [PATCH] kbuild: builddeb - avoid recompiles for non-cross-compiles`](https://lore.kernel.org/20260408221301.GB3963285@ax162/)
 * [`build: use user-supplied CROSS_COMPILE in compiler check`](https://github.com/kernelci/tuxmake/pull/266#issuecomment-4210200494)
 * [`clang hangs when building Linux kernel's rkvdec-vdpu383-h264.c for ARCH=hexagon`](https://github.com/llvm/llvm-project/issues/178535#issuecomment-4210183920)
+* [`Re: [PATCH v3] gcov: Disable GCOV_PROFILE_ALL on 32-bit UML with Clang 20/21`](https://lore.kernel.org/20260409182620.GA2550473@ax162/)
+* [`Re: [patch 01/12] clockevents: Prevent timer interrupt starvation`](https://lore.kernel.org/20260410211310.GA3924786@ax162/)
 * [``](https://lore.kernel.org/)
 * [``]()
 
@@ -74,6 +76,9 @@ The unfortunate thing about working at the intersection of two projects is we wi
 
 * [`Re: [PATCH] KVM: arm64: Advertise ID_AA64PFR2_EL1.GCIE`](https://lore.kernel.org/20260404181330.GA3987102@ax162/)
 * [`Manually specified CROSS_COMPILE no longer works with null runtime`](https://github.com/kernelci/tuxmake/issues/265)
+* [`Reapply "[clang][ModulesDriver] Add support for Clang modules to -fmodules-driver"`](https://github.com/llvm/llvm-project/pull/191258#issuecomment-4227294864)
+* [`Re: [patch 01/12] clockevents: Prevent timer interrupt starvation`](https://lore.kernel.org/20260410205203.GA3922321@ax162/)
+* [`Re: [PATCH 5.15 000/570] 5.15.203-rc1 review`](https://lore.kernel.org/20260413185112.GA501334@ax162/)
 * [``](https://lore.kernel.org/)
 * [``]()
 
@@ -89,6 +94,11 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`boot-utils: Add type annotations and linting with ty`](https://github.com/ClangBuiltLinux/boot-utils/pull/130)
 * [`A couple of m68k fixes`](https://github.com/ClangBuiltLinux/boot-utils/pull/131)
 * [`tc-build: Add typing annotations and enable ty`](https://github.com/ClangBuiltLinux/tc-build/pull/326)
+* [`tc-build: ci: Show verbose kernel build logs`](https://github.com/ClangBuiltLinux/tc-build/pull/327)
+* [`Bump PGO kernel to 7.0 and bump known good revision`](https://github.com/ClangBuiltLinux/tc-build/pull/328)
+* [`tc-build: Enable more Ruff lints`](https://github.com/ClangBuiltLinux/tc-build/pull/329)
+* [`boot-utils: Enable and fix several Ruff rules`](https://github.com/ClangBuiltLinux/boot-utils/pull/132)
+* [`Update stable anchor to 7.0`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/926)
 * [``]()
 
 
