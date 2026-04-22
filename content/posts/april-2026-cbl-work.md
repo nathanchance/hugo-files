@@ -34,6 +34,9 @@ Occasionally, I will forget to link something from the mailing list in this post
 * Stable backports and fixes: It is important to make sure that the stable trees are as free from issues as possible, as those are the trees that devices and users use; for example, Android and Chrome OS regularly merge from stable, so if there is a problem that will impact those trees that we fixed in mainline, it should be backported.
 
   * `drm/amd/display: Do not add '-mhard-float' to calcs, dsc, and dcn30 FP files for clang` ([`v1`](https://lore.kernel.org/20260406-5-10-clang-amdgpu-hard-float-errors-v1-1-09c4c045f848@kernel.org/))
+  * [`[PATCH 5.10] ACPI: property: Constify stubs for CONFIG_ACPI=n case`](https://lore.kernel.org/20260418230704.4178547-1-nathan@kernel.org/)
+  * [`[PATCH 5.15] i3c: fix uninitialized variable use in i2c setup`](https://lore.kernel.org/20260418231928.994943-1-nathan@kernel.org/)
+  * `scripts/dtc: Remove unused dts_version in dtc-lexer.l` ([`v1`](https://lore.kernel.org/20260420-stable-dts-unused-but-set-global-v1-1-9bdfba6889bb@kernel.org/))
   * `` ([`v1`]())
 
 * Warning fixes: These are patches to fix various warnings that appear with LLVM. I used to go into detail about the different warnings and what they mean, but the important takeaway for this section is that the kernel should build warning free, as [all developers should be using `CONFIG_WERROR`](https://lore.kernel.org/r/CAHk-=wifoM9VOp-55OZCRcO9MnqQ109UTuCiXeZ-eyX_JcNVGg@mail.gmail.com/), which will turn these all into failures. Maybe these should be in the build failures section...
@@ -65,6 +68,7 @@ Reviewing patches that are submitted is incredibly important, as it helps ensure
 * [`clang hangs when building Linux kernel's rkvdec-vdpu383-h264.c for ARCH=hexagon`](https://github.com/llvm/llvm-project/issues/178535#issuecomment-4210183920)
 * [`Re: [PATCH v3] gcov: Disable GCOV_PROFILE_ALL on 32-bit UML with Clang 20/21`](https://lore.kernel.org/20260409182620.GA2550473@ax162/)
 * [`Re: [patch 01/12] clockevents: Prevent timer interrupt starvation`](https://lore.kernel.org/20260410211310.GA3924786@ax162/)
+* [`Re: [PATCH] kbuild/btf: Remove broken module relinking exclusion`](https://lore.kernel.org/20260414203418.GA1022044@ax162/)
 * [``](https://lore.kernel.org/)
 * [``]()
 
@@ -79,6 +83,8 @@ The unfortunate thing about working at the intersection of two projects is we wi
 * [`Reapply "[clang][ModulesDriver] Add support for Clang modules to -fmodules-driver"`](https://github.com/llvm/llvm-project/pull/191258#issuecomment-4227294864)
 * [`Re: [patch 01/12] clockevents: Prevent timer interrupt starvation`](https://lore.kernel.org/20260410205203.GA3922321@ax162/)
 * [`Re: [PATCH 5.15 000/570] 5.15.203-rc1 review`](https://lore.kernel.org/20260413185112.GA501334@ax162/)
+* [`Re: [PATCH v2 2/2] arch/riscv: Add bitrev.h file to support rev8 and brev8`](https://lore.kernel.org/20260416231441.GA12905@ax162/)
+* [`Re: [PATCH 7/8] smb: client: compress: add compress/common.h`](https://lore.kernel.org/20260420212411.GA2260299@ax162/)
 * [``](https://lore.kernel.org/)
 * [``]()
 
@@ -99,6 +105,13 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`tc-build: Enable more Ruff lints`](https://github.com/ClangBuiltLinux/tc-build/pull/329)
 * [`boot-utils: Enable and fix several Ruff rules`](https://github.com/ClangBuiltLinux/boot-utils/pull/132)
 * [`Update stable anchor to 7.0`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/926)
+* [`boot-utils: Enable EM rule set and preview mode for ruff`](https://github.com/ClangBuiltLinux/boot-utils/pull/133)
+* [`tc-build: Updates to ruff.toml (April 16, 2026)`](https://github.com/ClangBuiltLinux/tc-build/pull/330)
+* [`workflows: python_lint: Bump setup-uv to v8.1.0`](https://github.com/ClangBuiltLinux/actions-workflows/pull/14)
+* [`tc_build: tools: Update variable names and assertion message in generate_versioned_binaries()`](https://github.com/ClangBuiltLinux/tc-build/pull/331)
+* [`tc_build: kernel: Try to find all common PowerPC binutils`](https://github.com/ClangBuiltLinux/tc-build/pull/332)
+* [`src: Add two patches for -Wunused-but-set-global`](https://github.com/ClangBuiltLinux/tc-build/pull/333)
+* [`Update korg-clang-22 to 22.1.4`](https://github.com/kernelci/tuxmake/pull/279)
 * [``]()
 
 
@@ -110,6 +123,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * I continue to upload prebuilt, fast versions of LLVM for kernel developers and our continuous integration to use.
 
   * [22.1.3](https://lore.kernel.org/20260408001057.GA3264248@ax162/)
+  * [22.1.4](https://lore.kernel.org/20260422053019.GA3090128@ax162/)
 
 * I submitted the following pull requests.
 
