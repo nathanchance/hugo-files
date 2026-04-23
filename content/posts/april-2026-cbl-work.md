@@ -69,6 +69,10 @@ Reviewing patches that are submitted is incredibly important, as it helps ensure
 * [`Re: [PATCH v3] gcov: Disable GCOV_PROFILE_ALL on 32-bit UML with Clang 20/21`](https://lore.kernel.org/20260409182620.GA2550473@ax162/)
 * [`Re: [patch 01/12] clockevents: Prevent timer interrupt starvation`](https://lore.kernel.org/20260410211310.GA3924786@ax162/)
 * [`Re: [PATCH] kbuild/btf: Remove broken module relinking exclusion`](https://lore.kernel.org/20260414203418.GA1022044@ax162/)
+* [`Re: [PATCH] kernel: trace: do not generate undefsyms_base.c`](https://lore.kernel.org/20260421215135.GA367904@ax162/)
+* [`Re: [PATCH 1/2] Compiler Attributes: Add __access macro`](https://lore.kernel.org/20260422055020.GA3392234@ax162/)
+* [`Re: [PATCH] kbuild: Never respect CONFIG_WERROR / W=e to fixdep`](https://lore.kernel.org/20260422200526.GA310618@ax162/)
+* [`Re: [PATCH] kbuild: deb-pkg: propagate hook script failures in builddeb`](https://lore.kernel.org/20260422220632.GA1448493@ax162/)
 * [``](https://lore.kernel.org/)
 * [``]()
 
@@ -112,6 +116,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * [`tc_build: kernel: Try to find all common PowerPC binutils`](https://github.com/ClangBuiltLinux/tc-build/pull/332)
 * [`src: Add two patches for -Wunused-but-set-global`](https://github.com/ClangBuiltLinux/tc-build/pull/333)
 * [`Update korg-clang-22 to 22.1.4`](https://github.com/kernelci/tuxmake/pull/279)
+* [`Add 6.18`](https://github.com/ClangBuiltLinux/continuous-integration2/pull/927)
 * [``]()
 
 
