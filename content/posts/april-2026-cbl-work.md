@@ -89,6 +89,7 @@ The unfortunate thing about working at the intersection of two projects is we wi
 * [`Re: [PATCH 5.15 000/570] 5.15.203-rc1 review`](https://lore.kernel.org/20260413185112.GA501334@ax162/)
 * [`Re: [PATCH v2 2/2] arch/riscv: Add bitrev.h file to support rev8 and brev8`](https://lore.kernel.org/20260416231441.GA12905@ax162/)
 * [`Re: [PATCH 7/8] smb: client: compress: add compress/common.h`](https://lore.kernel.org/20260420212411.GA2260299@ax162/)
+* [`Re: [PATCH V4 14/14] LoongArch: Adjust build infrastructure for 32BIT/64BIT`](https://lore.kernel.org/20260423220647.GA3447678@ax162/)
 * [``](https://lore.kernel.org/)
 * [``]()
 
@@ -133,6 +134,7 @@ These are changes to various tools that we use, such as our continuous integrati
 * I submitted the following pull requests.
 
   * [`[GIT PULL] Kbuild fixes for 7.0 #4`](https://lore.kernel.org/20260409231842.GA3337002@ax162/)
+  * [`[GIT PULL] Clang build fix for 7.1`](https://lore.kernel.org/20260424000413.GA1031124@ax162/)
 
 
 
