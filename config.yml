@@ -50,7 +50,7 @@ params:
   social: true
 
   editPost:
-    URL: "https://github.com/nathanchance/hugo-files/blob/main/content"
+    URL: "https://codeberg.org/nathanchance/hugo-files/src/branch/main/content"
     Text: "Suggest Changes"
     appendFilePath: true
 
