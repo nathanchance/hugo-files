@@ -79,10 +79,10 @@ params:
     - name: linkedin
       url: "https://linkedin.com/in/nathanchancellor"
     # git
-    - name: github
-      url: "https://github.com/nathanchance"
     - name: forgejo
       url: "https://codeberg.org/nathanchance"
+    - name: github
+      url: "https://github.com/nathanchance"
     - name: gitlab
       url: "https://gitlab.com/nathanchance"
     # chat
