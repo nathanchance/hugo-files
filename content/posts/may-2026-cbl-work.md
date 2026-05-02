@@ -62,6 +62,7 @@ Reviewing patches that are submitted is incredibly important, as it helps ensure
 The unfortunate thing about working at the intersection of two projects is we will often find bugs that are not strictly related to the project, which require some triage and reporting back to the original author of the breakage so that they can be fixed and not impact our own testing. Some of these bugs fall into that category while others are issues strictly related to this project.
 
 * [`ld.lld hangs when building Linux kernel with full LTO after recent flatten change`](https://github.com/llvm/llvm-project/issues/195236)
+* [`-Wframe-larger-than in drivers/gpu/drm/amd/amdgpu/../display/dc/dml/dcn31{,4}/display_mode_vba_31{,4}.c`](https://github.com/ClangBuiltLinux/linux/issues/2161)
 * [``](https://lore.kernel.org/)
 * [``]()
 
